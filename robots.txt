@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wildhaventour.com/sitemap.xml
