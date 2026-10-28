@@ -383,7 +383,7 @@ function setLang(l){
 }
 var QA={es:[['¿Cómo reservo?','s2'],['¿Pagaré IVA?','a1'],['¿Qué idiomas hablan?','a3'],['¿Incluye desayuno?','f1'],['¿Horarios de entrada y salida?','f2'],['¿Cómo llego al hotel?','f3'],['¿Cuánto es el abono?','f4'],['¿Me devuelven el abono?','f5'],['¿Cuándo pago el resto?','f6']],en:[['How do I book?','s2'],['Will I pay VAT?','a1'],['Which languages?','a3'],['Is breakfast included?','f1'],['Check-in and check-out?','f2'],['How do I get to the hotel?','f3'],['How much is the deposit?','f4'],['Can I get my deposit back?','f5'],['When do I pay the rest?','f6']]};
 function say(t,c){var d=document.createElement('div');d.className='m '+c;d.textContent=t;$('log').appendChild(d);$('log').scrollTop=1e5}
-function renderQs(){var q=$('qs');q.textContent='';QA[L].forEach(function(x){var b=document.createElement('button');b.textContent=x[0];b.onclick=function(){say(x[0],'u');say(T[L][x[1]],'b')};q.appendChild(b)});$('log').textContent='';say(T[L].greet,'b')}
+function renderQs(){var q=$('qs');q.textContent='';QA[L].forEach(function(x){var b=document.createElement('button');b.textContent=x[0];b.onclick=function(){$('log').textContent='';say(x[0],'u');say(T[L][x[1]],'b');$('log').scrollTop=0};q.appendChild(b)});$('log').textContent='';say(T[L].greet,'b')}
 ['nts','res','arr','fn','fc','fe'].forEach(function(i){$(i).addEventListener('input',calc)});
 $('l-es').onclick=function(){setLang('es')};$('l-en').onclick=function(){setLang('en')};
 $('bot-x').onclick=function(){$('bot').classList.remove('open');$('bot-btn').setAttribute('aria-expanded',false)};
