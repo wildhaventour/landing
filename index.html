@@ -139,11 +139,11 @@ footer{padding:2rem 0 5rem;color:var(--muted);font-size:.9rem}
   <div id="rooms"></div>
   <button type="button" id="addroom" class="addbtn" data-i="addroom"></button>
   <div class="row">
-   <div><label for="nts" data-i="lnts"></label><input id="nts" type="number" min="1" max="30" value="3" inputmode="numeric"></div>
-   <div><label for="res" data-i="lres"></label><select id="res"><option value="f" data-i="foreign"></option><option value="r" data-i="resid"></option></select></div>
+   <div><label for="nts" data-i="lnts"></label><input id="nts" type="number" autocomplete="off" min="1" max="30" value="3" inputmode="numeric"></div>
+   <div><label for="res" data-i="lres"></label><select id="res" autocomplete="off"><option value="f" data-i="foreign"></option><option value="r" data-i="resid"></option></select></div>
   </div>
   <div class="row">
-   <div><label for="arr" data-i="ldate"></label><input id="arr" type="date"></div>
+   <div><label for="arr" data-i="ldate"></label><input id="arr" type="date" autocomplete="off"></div>
   </div>
   <div class="out" aria-live="polite">
    <div id="brkwrap" hidden><div class="small" data-i="brkh"></div><div class="lines" id="o-brk" style="margin-bottom:.9rem"></div></div>
@@ -404,7 +404,7 @@ function lbClose(){$('lb').classList.remove('open');$('lb-img').src='';document.
 document.querySelectorAll('.gal img,.cimg,.night img,.heroimg').forEach(function(im){im.addEventListener('click',function(){$('lb-img').src=im.currentSrc||im.src;$('lb-img').alt=im.alt;$('lb-cap').textContent=im.alt;$('lb').classList.add('open');document.body.style.overflow='hidden'})});
 $('lb-x').onclick=lbClose;$('lb').addEventListener('click',function(e){if(e.target.id==='lb')lbClose()});document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose()});
 function todayStr(){var t=new Date();return t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0')}
-$('arr').min=todayStr();function clrPast(){var a=$('arr');if(a.value&&a.value<todayStr()){a.value='';try{calc()}catch(e){}}}clrPast();window.addEventListener('pageshow',clrPast);
+$('arr').min=todayStr();(function(){['fn','fc','fe','arr'].forEach(function(i){$(i).value=''});$('nts').value=3;$('res').selectedIndex=0;try{calc()}catch(e){}})();function clrPast(){var a=$('arr');if(a.value&&a.value<todayStr()){a.value='';try{calc()}catch(e){}}}clrPast();window.addEventListener('pageshow',clrPast);
 function reqOk(){var nm=$('fn').value.trim().length>1,ml=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('fe').value.trim()),av=$('arr').value;return nm&&ml&&av&&av>=todayStr()}
 ['wa','em'].forEach(function(id){$(id).addEventListener('click',function(e){if(!reqOk()){e.preventDefault();$('o-req').textContent=T[L].req;$('o-req').hidden=false;var tgt=!$('arr').value||$('arr').value<todayStr()?'arr':($('fn').value.trim().length<2?'fn':'fe');$(tgt).focus()}else{$('o-req').hidden=true}})});
 ['fn','fe','arr'].forEach(function(id){$(id).addEventListener('input',function(){if(reqOk())$('o-req').hidden=true})});
