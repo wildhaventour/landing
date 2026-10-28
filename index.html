@@ -19,6 +19,11 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#0F1B1D;--surface:#172A2D;--ink:#E7F1EF;--muted:#9DB5B2;--teal:#5CC4BC;--teal-ink:#06201F;--sea:#1F3F40;--line:#2A4547}
 *,*::before,*::after{box-sizing:inherit}
 [hidden]{display:none!important}
+html,body{max-width:100%;overflow-x:hidden}
+.row>div{min-width:0}
+input,select{min-width:0;max-width:100%}
+.out .big{overflow-wrap:anywhere}
+img,video{max-width:100%}
 .gal img,.cimg,.night img,.heroimg{cursor:zoom-in}
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:20;display:none;align-items:center;justify-content:center;padding:3.5rem .5rem 1rem}
 #lb.open{display:flex}
