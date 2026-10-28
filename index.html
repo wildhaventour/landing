@@ -19,6 +19,12 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#0F1B1D;--surface:#172A2D;--ink:#E7F1EF;--muted:#9DB5B2;--teal:#5CC4BC;--teal-ink:#06201F;--sea:#1F3F40;--line:#2A4547}
 *,*::before,*::after{box-sizing:inherit}
 [hidden]{display:none!important}
+.gal img,.cimg,.night img,.heroimg{cursor:zoom-in}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:20;display:none;align-items:center;justify-content:center;padding:3.5rem .5rem 1rem}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+#lb-x{position:absolute;top:calc(.6rem + env(safe-area-inset-top,0px));left:.6rem;width:2.8rem;height:2.8rem;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#16282B;font-size:1.6rem;line-height:1;cursor:pointer}
+#lb-cap{position:absolute;bottom:.6rem;left:1rem;right:1rem;color:#fff;font-size:.9rem;text-align:center}
 .journey{display:grid;gap:1rem;margin-top:1rem}
 @media(min-width:700px){.journey{grid-template-columns:1fr 1fr}}
 @media(min-width:1000px){.journey{grid-template-columns:repeat(4,1fr)}}
@@ -305,6 +311,7 @@ footer{padding:2rem 0 5rem;color:var(--muted);font-size:.9rem}
 <footer><p data-i="foot"></p><p><a href="legal.html#privacy" data-i="fpriv"></a> · <a href="legal.html#terms" data-i="fterms"></a> · <a href="mailto:bookings@wildhaventour.com">bookings@wildhaventour.com</a></p></footer>
 </div>
 
+<div id="lb" role="dialog" aria-modal="true"><button type="button" id="lb-x" aria-label="Close">×</button><img id="lb-img" alt=""><div id="lb-cap"></div></div>
 <button id="bot-btn" aria-expanded="false" aria-controls="bot" data-i="botbtn"></button>
 <div id="bot" role="dialog" aria-label="Asistente" style="position:fixed"><h3 data-i="bott"></h3><button type="button" id="bot-x" aria-label="Close">×</button><div id="log"></div><div id="qs"></div><div class="small" data-i="qhint" style="padding:0 .7rem .5rem;text-align:right"></div></div>
 
@@ -386,6 +393,9 @@ function say(t,c){var d=document.createElement('div');d.className='m '+c;d.textC
 function renderQs(){var q=$('qs');q.textContent='';QA[L].forEach(function(x){var b=document.createElement('button');b.textContent=x[0];b.onclick=function(){$('log').textContent='';say(x[0],'u');say(T[L][x[1]],'b');$('log').scrollTop=0};q.appendChild(b)});$('log').textContent='';say(T[L].greet,'b')}
 ['nts','res','arr','fn','fc','fe'].forEach(function(i){$(i).addEventListener('input',calc)});
 $('l-es').onclick=function(){setLang('es')};$('l-en').onclick=function(){setLang('en')};
+function lbClose(){$('lb').classList.remove('open');$('lb-img').src='';document.body.style.overflow=''}
+document.querySelectorAll('.gal img,.cimg,.night img,.heroimg').forEach(function(im){im.addEventListener('click',function(){$('lb-img').src=im.currentSrc||im.src;$('lb-img').alt=im.alt;$('lb-cap').textContent=im.alt;$('lb').classList.add('open');document.body.style.overflow='hidden'})});
+$('lb-x').onclick=lbClose;$('lb').addEventListener('click',function(e){if(e.target.id==='lb')lbClose()});document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose()});
 $('bot-x').onclick=function(){$('bot').classList.remove('open');$('bot-btn').setAttribute('aria-expanded',false)};
 $('bot-btn').onclick=function(){var o=$('bot').classList.toggle('open');$('bot-btn').setAttribute('aria-expanded',o)};
 var NL=(navigator.language||'en').toLowerCase();setLang(NL.indexOf('es')===0?'es':'en');
