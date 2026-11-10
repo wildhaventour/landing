@@ -246,7 +246,7 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 @media(min-width:760px){.pk-solo{grid-template-columns:1.4fr 1fr}}
 .pk-solo p{color:#D5E9E6}
 #pk{--deep:#0B3A44}
-#pk + .hero{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:2.2rem}
+#pk .hero{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:2.2rem}
 :root{--deep:#0B3A44}
 .pk-hero{display:block;min-height:0}
 .pk-hero img.pk-scene{position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center}
@@ -288,6 +288,109 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 </div>
 
 <section class="pk-band"><div class="pk-eyebrow" data-pk="v_eye"></div><h2 data-pk="v_t"></h2><p data-pk="v_p"></p><video class="pk-bandvid" id="herovid" autoplay muted loop playsinline preload="metadata" poster="media/video/hero-isabela.jpg" aria-hidden="true"><source src="media/video/hero-isabela.mp4" type="video/mp4"></video></section>
+<div class="hero">
+ <div>
+  <h2 class="hh" data-i="h1"></h2>
+  <p data-i="sub"></p>
+
+  <div class="gal gal3">
+   <img loading="lazy" src="media/hotel/piscina.jpg" data-a="a_pisc" alt="" width="864" height="1080">
+   <img loading="lazy" src="media/hotel/salon.jpg" data-a="a_salon" alt="" width="960" height="540">
+   <img loading="lazy" src="media/hotel/snorkel.jpg" data-a="a_snk" alt="" width="921" height="540">
+  </div>
+  <div class="hsv">
+   <div class="eyebrow" data-i="hse"></div>
+   <h2 data-i="hst"></h2>
+   <p data-i="hsp"></p>
+   <ul class="hl2"><li><span aria-hidden="true">☕</span><span data-i="hi1"></span></li><li><span aria-hidden="true">🌊</span><span data-i="hi2"></span></li><li><span aria-hidden="true">❄️</span><span data-i="hi3"></span></li><li><span aria-hidden="true">🏊</span><span data-i="hi4"></span></li><li><span aria-hidden="true">🤿</span><span data-i="hi5"></span></li><li><span aria-hidden="true">🤝</span><span data-i="hi6"></span></li></ul>
+  </div>
+  <div class="hrm">
+   <div class="eyebrow" data-i="hre"></div>
+   <h2 data-i="stript"></h2>
+   <p data-i="hrp"></p>
+  </div>
+  <div class="gal strip">
+   <img loading="lazy" src="media/hotel/hab5-1.jpg" data-a="a_h51" alt="" width="720" height="960">
+   <img loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960">
+   <img loading="lazy" src="media/hotel/ventanales.jpg" data-a="a_vent" alt="" width="912" height="540">
+   <img loading="lazy" src="media/hotel/hab6-2.jpg" data-a="a_h62" alt="" width="720" height="960">
+   <img loading="lazy" src="media/hotel/hab5-3.jpg" data-a="a_h53" alt="" width="720" height="960">
+   <img loading="lazy" src="media/hotel/bano.jpg" data-a="a_bano" alt="" width="998" height="540">
+  </div>
+  <p class="small" data-i="striph"></p>
+ </div>
+
+</div>
+
+<section id="habitaciones"><h2 data-i="rt"></h2>
+ <div class="grid two">
+  <div class="card feat"><img class="cimg" loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960" style="object-position:center 33%"><span class="badge" data-i="feat"></span><h3 data-i="sup"></h3><p data-i="d2"></p><p class="small" data-i="featn"></p></div>
+  <div class="card"><h3 data-i="std"></h3><p data-i="d1"></p></div>
+ </div>
+ <div class="gal">
+  <img loading="lazy" src="media/hotel/ventanales.jpg" data-a="a_vent" alt="" width="912" height="540">
+  <img loading="lazy" src="media/hotel/escritorio.jpg" data-a="a_escr" alt="" width="1191" height="540">
+  <img loading="lazy" src="media/hotel/bano.jpg" data-a="a_bano" alt="" width="998" height="540">
+ </div>
+ <h3 style="margin-top:1.6rem" data-i="h5"></h3>
+ <div class="gal gal6">
+  <img loading="lazy" src="media/hotel/hab5-1.jpg" data-a="a_h51" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab5-2.jpg" data-a="a_h52" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab5-3.jpg" data-a="a_h53" alt="" width="720" height="960">
+ </div>
+ <p class="cap" data-i="h5n"></p>
+ <h3 style="margin-top:1.6rem" data-i="h6"></h3>
+ <div class="gal gal6">
+  <img loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab6-2.jpg" data-a="a_h62" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab6-3.jpg" data-a="a_h63" alt="" width="720" height="960">
+ </div>
+ <p class="small" data-i="gnote"></p>
+</section>
+
+<section id="presupuesto">
+ <div class="calc" id="calc">
+  <span class="badge" id="lbadge" data-i="lbadge"></span>
+  <h2 data-i="ct"></h2>
+  <p id="lbar" data-i="lbar" style="background:#fff4d6;border:1px solid var(--gold,#e8a82a);border-radius:10px;padding:.65rem .8rem;font-weight:700;font-size:.92rem;margin:.2rem 0 .8rem"></p>
+  <p data-i="cintro"></p>
+  <button type="button" id="open-calc" class="cta" data-i="copen"></button>
+  <div id="calcbody" hidden>
+  <div id="rooms"></div>
+  <button type="button" id="addroom" class="addbtn" data-i="addroom"></button>
+  <div class="row">
+   <div><label for="nts" data-i="lnts"></label><input id="nts" type="number" autocomplete="off" min="1" max="30" value="3" inputmode="numeric"></div>
+   <div><label for="res" data-i="lres"></label><select id="res" autocomplete="off"><option value="f" data-i="foreign"></option><option value="r" data-i="resid"></option></select></div>
+  </div>
+  <div class="row">
+   <div><label for="arr" data-i="ldate"></label><input id="arr" type="date" autocomplete="off"></div>
+  </div>
+  <div class="out" aria-live="polite">
+   <div id="brkwrap" hidden><div class="small" data-i="brkh"></div><div class="lines" id="o-brk" style="margin-bottom:.9rem"></div></div>
+   <div class="small" data-i="pp"></div><div class="big" id="o-pp"></div>
+   <div class="small" id="o-lnch" style="margin-top:.4rem;color:var(--teal);font-weight:700"></div>
+   <div class="small" style="margin-top:.7rem" data-i="tot"></div><div class="big" id="o-tot"></div>
+   <div class="small" id="o-warn" style="margin-top:.5rem;color:#B3261E;font-weight:700"></div>
+   <div class="small" id="o-note" style="margin-top:.5rem"></div>
+   <div class="small" data-i="qnote" style="margin-top:.5rem"></div>
+   <div class="small" id="o-gate" data-i="gate" style="margin-top:.5rem;font-weight:700"></div>
+  </div>
+  <div class="row">
+   <div><label for="fn" data-i="lname"></label><input id="fn" autocomplete="name"></div>
+   <div><label for="fc" data-i="lcountry"></label><input id="fc" autocomplete="country-name"></div>
+  </div>
+  <div class="row" style="grid-template-columns:1fr">
+   <div><label for="fe" data-i="lemail"></label><input id="fe" type="email" autocomplete="email" inputmode="email"></div>
+  </div>
+  <div class="small" data-i="lcons" style="margin-bottom:.8rem"></div>
+  <div class="small" id="o-req" role="alert" style="color:#B3261E;font-weight:700;margin-bottom:.6rem" hidden></div>
+  <a class="cta" id="wa" href="#" target="_blank" rel="noopener" data-i="wa"></a>
+  <a class="cta" id="em" href="#" data-i="em" style="margin-top:.6rem;background:none;color:var(--ink);border:2px solid var(--teal)"></a>
+  </div>
+ </div>
+ <a class="cta discover" href="#habitaciones" data-i="disc" style="margin:1.6rem auto 0"></a>
+</section>
+
 <!-- WHY -->
 <section>
  <div class="pk-eyebrow" data-pk="w_eye"></div>
@@ -397,110 +500,12 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 <p class="pk-small" style="margin:.4rem 0 0" data-pk="cred"></p>
 </div>
 
-<div class="hero">
- <div>
-  <h2 class="hh" data-i="h1"></h2>
-  <p data-i="sub"></p>
-
-  <div class="gal gal3">
-   <img loading="lazy" src="media/hotel/piscina.jpg" data-a="a_pisc" alt="" width="864" height="1080">
-   <img loading="lazy" src="media/hotel/salon.jpg" data-a="a_salon" alt="" width="960" height="540">
-   <img loading="lazy" src="media/hotel/snorkel.jpg" data-a="a_snk" alt="" width="921" height="540">
-  </div>
-  <div class="hsv">
-   <div class="eyebrow" data-i="hse"></div>
-   <h2 data-i="hst"></h2>
-   <p data-i="hsp"></p>
-   <ul class="hl2"><li><span aria-hidden="true">☕</span><span data-i="hi1"></span></li><li><span aria-hidden="true">🌊</span><span data-i="hi2"></span></li><li><span aria-hidden="true">❄️</span><span data-i="hi3"></span></li><li><span aria-hidden="true">🏊</span><span data-i="hi4"></span></li><li><span aria-hidden="true">🤿</span><span data-i="hi5"></span></li><li><span aria-hidden="true">🤝</span><span data-i="hi6"></span></li></ul>
-  </div>
-  <div class="hrm">
-   <div class="eyebrow" data-i="hre"></div>
-   <h2 data-i="stript"></h2>
-   <p data-i="hrp"></p>
-  </div>
-  <div class="gal strip">
-   <img loading="lazy" src="media/hotel/hab5-1.jpg" data-a="a_h51" alt="" width="720" height="960">
-   <img loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960">
-   <img loading="lazy" src="media/hotel/ventanales.jpg" data-a="a_vent" alt="" width="912" height="540">
-   <img loading="lazy" src="media/hotel/hab6-2.jpg" data-a="a_h62" alt="" width="720" height="960">
-   <img loading="lazy" src="media/hotel/hab5-3.jpg" data-a="a_h53" alt="" width="720" height="960">
-   <img loading="lazy" src="media/hotel/bano.jpg" data-a="a_bano" alt="" width="998" height="540">
-  </div>
-  <p class="small" data-i="striph"></p>
- </div>
-
-</div>
 
 
 
-<section id="habitaciones"><h2 data-i="rt"></h2>
- <div class="grid two">
-  <div class="card feat"><img class="cimg" loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960" style="object-position:center 33%"><span class="badge" data-i="feat"></span><h3 data-i="sup"></h3><p data-i="d2"></p><p class="small" data-i="featn"></p></div>
-  <div class="card"><h3 data-i="std"></h3><p data-i="d1"></p></div>
- </div>
- <div class="gal">
-  <img loading="lazy" src="media/hotel/ventanales.jpg" data-a="a_vent" alt="" width="912" height="540">
-  <img loading="lazy" src="media/hotel/escritorio.jpg" data-a="a_escr" alt="" width="1191" height="540">
-  <img loading="lazy" src="media/hotel/bano.jpg" data-a="a_bano" alt="" width="998" height="540">
- </div>
- <h3 style="margin-top:1.6rem" data-i="h5"></h3>
- <div class="gal gal6">
-  <img loading="lazy" src="media/hotel/hab5-1.jpg" data-a="a_h51" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab5-2.jpg" data-a="a_h52" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab5-3.jpg" data-a="a_h53" alt="" width="720" height="960">
- </div>
- <p class="cap" data-i="h5n"></p>
- <h3 style="margin-top:1.6rem" data-i="h6"></h3>
- <div class="gal gal6">
-  <img loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab6-2.jpg" data-a="a_h62" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab6-3.jpg" data-a="a_h63" alt="" width="720" height="960">
- </div>
- <p class="small" data-i="gnote"></p>
-</section>
 
-<section id="presupuesto">
- <div class="calc" id="calc">
-  <span class="badge" id="lbadge" data-i="lbadge"></span>
-  <h2 data-i="ct"></h2>
-  <p id="lbar" data-i="lbar" style="background:#fff4d6;border:1px solid var(--gold,#e8a82a);border-radius:10px;padding:.65rem .8rem;font-weight:700;font-size:.92rem;margin:.2rem 0 .8rem"></p>
-  <p data-i="cintro"></p>
-  <button type="button" id="open-calc" class="cta" data-i="copen"></button>
-  <div id="calcbody" hidden>
-  <div id="rooms"></div>
-  <button type="button" id="addroom" class="addbtn" data-i="addroom"></button>
-  <div class="row">
-   <div><label for="nts" data-i="lnts"></label><input id="nts" type="number" autocomplete="off" min="1" max="30" value="3" inputmode="numeric"></div>
-   <div><label for="res" data-i="lres"></label><select id="res" autocomplete="off"><option value="f" data-i="foreign"></option><option value="r" data-i="resid"></option></select></div>
-  </div>
-  <div class="row">
-   <div><label for="arr" data-i="ldate"></label><input id="arr" type="date" autocomplete="off"></div>
-  </div>
-  <div class="out" aria-live="polite">
-   <div id="brkwrap" hidden><div class="small" data-i="brkh"></div><div class="lines" id="o-brk" style="margin-bottom:.9rem"></div></div>
-   <div class="small" data-i="pp"></div><div class="big" id="o-pp"></div>
-   <div class="small" id="o-lnch" style="margin-top:.4rem;color:var(--teal);font-weight:700"></div>
-   <div class="small" style="margin-top:.7rem" data-i="tot"></div><div class="big" id="o-tot"></div>
-   <div class="small" id="o-warn" style="margin-top:.5rem;color:#B3261E;font-weight:700"></div>
-   <div class="small" id="o-note" style="margin-top:.5rem"></div>
-   <div class="small" data-i="qnote" style="margin-top:.5rem"></div>
-   <div class="small" id="o-gate" data-i="gate" style="margin-top:.5rem;font-weight:700"></div>
-  </div>
-  <div class="row">
-   <div><label for="fn" data-i="lname"></label><input id="fn" autocomplete="name"></div>
-   <div><label for="fc" data-i="lcountry"></label><input id="fc" autocomplete="country-name"></div>
-  </div>
-  <div class="row" style="grid-template-columns:1fr">
-   <div><label for="fe" data-i="lemail"></label><input id="fe" type="email" autocomplete="email" inputmode="email"></div>
-  </div>
-  <div class="small" data-i="lcons" style="margin-bottom:.8rem"></div>
-  <div class="small" id="o-req" role="alert" style="color:#B3261E;font-weight:700;margin-bottom:.6rem" hidden></div>
-  <a class="cta" id="wa" href="#" target="_blank" rel="noopener" data-i="wa"></a>
-  <a class="cta" id="em" href="#" data-i="em" style="margin-top:.6rem;background:none;color:var(--ink);border:2px solid var(--teal)"></a>
-  </div>
- </div>
- <a class="cta discover" href="#habitaciones" data-i="disc" style="margin:1.6rem auto 0"></a>
-</section>
+
+
 
 <div id="pk2">
 <section id="tours">
