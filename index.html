@@ -247,6 +247,11 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 .pk-solo p{color:#D5E9E6}
 #pk{--deep:#0B3A44}
 #pk + .hero{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:2.2rem}
+:root{--deep:#0B3A44}
+.pk-hero img.pk-scene{object-position:center 60%}
+.pk-band{text-align:left}
+.pk-bandvid{width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin:1rem auto 0;background:#000}
+@media(min-width:760px){.pk-hero{min-height:560px}}
 .pk-eyebrow{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wood);font-weight:700;margin-bottom:.5rem}
 .pk-small{font-size:.88rem;color:var(--muted)}
 .hh{font-size:clamp(2rem,6vw,3.4rem);max-width:16ch;font-weight:600;letter-spacing:-.01em;line-height:1.1;margin:0 0 .6rem}
@@ -269,16 +274,17 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 <div id="pk">
 <!-- HERO -->
 <div class="pk-hero">
- <video class="pk-scene" id="herovid" autoplay muted loop playsinline preload="metadata" poster="media/video/hero-isabela.jpg" aria-hidden="true"><source src="media/video/hero-isabela.mp4" type="video/mp4"></video>
+ <img class="pk-scene" src="media/hotel/fachada.jpg" data-pka="a_fach" alt="" width="1280" height="720" fetchpriority="high">
  <div class="pk-in">
   <div class="pk-eyebrow" data-pk="h_eye"></div>
   <h1 data-pk="h1"></h1>
   <p data-pk="h_sub"></p>
   <div class="pk-lnch" id="hlnch" data-pk="lnch_badge"></div>
-  <div class="pk-row"><a class="pk-btn" href="#packs" data-pk="h_cta"></a><a class="pk-btn pk-ghost" href="#pksolo" data-pk="h_cta2"></a></div>
+  <div class="pk-row"><a class="pk-btn" href="#packs" data-pk="h_cta"></a><a class="pk-btn pk-ghost" href="#presupuesto" data-pk="h_cta2"></a></div>
  </div>
 </div>
 
+<section class="pk-band"><div class="pk-eyebrow" data-pk="v_eye"></div><h2 data-pk="v_t"></h2><p data-pk="v_p"></p><video class="pk-bandvid" id="herovid" autoplay muted loop playsinline preload="metadata" poster="media/video/hero-isabela.jpg" aria-hidden="true"><source src="media/video/hero-isabela.mp4" type="video/mp4"></video></section>
 <!-- WHY -->
 <section>
  <div class="pk-eyebrow" data-pk="w_eye"></div>
@@ -384,60 +390,14 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 </section>
 
 <!-- TOURS -->
-<section id="tours">
- <div class="pk-eyebrow" data-pk="t_eye"></div>
- <h2 data-pk="t_t"></h2>
- <p data-pk="t_p"></p>
- <div class="pk-tours" id="tourgrid"></div>
- <div class="pk-wet">
-  <img src="media/hotel/snorkel.jpg" data-pka="a_snk" alt="" width="921" height="540" loading="lazy">
-  <div><h3 data-pk="wet_t"></h3><p data-pk="wet_p" style="margin:0"></p></div>
- </div>
- <div class="pk-cart" id="cart" hidden>
-  <div><div class="pk-small" style="color:#BFD9D5" id="ct_list"></div><div class="pk-ct" id="ct_tot"></div></div>
-  <div><label for="tpax" style="color:#BFD9D5" data-pk="c_pax"></label><select id="tpax"></select></div>
-  <a class="pk-btn" id="wa_tours" href="#" target="_blank" rel="noopener" data-pk="t_cta"></a>
- </div>
-</section>
 
-<!-- FREE TIME -->
-<section>
- <div class="pk-eyebrow" data-pk="f_eye"></div>
- <h2 data-pk="f_t"></h2>
- <p data-pk="f_p"></p>
- <div class="pk-free">
-  <div class="pk-fi"><b data-pk="f1t"></b><span data-pk="f1p"></span></div>
-  <div class="pk-fi"><b data-pk="f2t"></b><span data-pk="f2p"></span></div>
-  <div class="pk-fi"><img src="media/isla/muro-lagrimas.jpg" data-pka="a_muro" alt="" width="1280" height="851" loading="lazy"><b data-pk="f3t"></b><span data-pk="f3p"></span></div>
-  <div class="pk-fi"><b data-pk="f4t"></b><span data-pk="f4p"></span></div>
- </div>
-</section>
-
-<!-- INCLUDES / HOW -->
-<section>
- <h2 data-pk="i_t"></h2>
- <div class="pk-cols">
-  <div class="pk-box"><h3 data-pk="i_yes"></h3><ul><li data-pk="y1"></li><li data-pk="y2"></li><li data-pk="y3"></li><li data-pk="y4"></li><li data-pk="y5"></li></ul></div>
-  <div class="pk-box pk-no"><h3 data-pk="i_no"></h3><ul><li data-pk="n1"></li><li data-pk="n2"></li><li data-pk="n3"></li><li data-pk="n4"></li></ul></div>
- </div>
- <h3 style="margin-top:2rem" data-pk="h_t"></h3>
- <ol class="pk-steps"><li data-pk="s1"></li><li data-pk="s2"></li><li data-pk="s3"></li><li data-pk="s4"></li></ol>
-</section>
-
-
-<section id="pksolo">
- <div class="pk-solo">
-  <div><div class="pk-eyebrow" style="color:var(--sun)" data-pk="so_eye"></div><h2 data-pk="so_t"></h2><p data-pk="so_p"></p></div>
-  <div style="display:grid;gap:.6rem"><a class="pk-btn" href="#presupuesto" data-pk="so_cta"></a><a class="pk-btn pk-ghost" href="#tours" data-pk="so_cta2"></a></div>
- </div>
-</section>
 <p class="pk-small" style="margin:.4rem 0 0" data-pk="cred"></p>
 </div>
+
 <div class="hero">
  <div>
   <h2 class="hh" data-i="h1"></h2>
   <p data-i="sub"></p>
-  <img class="heroimg" src="media/hotel/fachada.jpg" data-a="a_fachada" alt="" width="1280" height="720">
 
   <div class="gal gal3">
    <img loading="lazy" src="media/hotel/piscina.jpg" data-a="a_pisc" alt="" width="864" height="1080">
@@ -469,33 +429,31 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 </div>
 
 
-<section id="noche"><div class="night">
- <img loading="lazy" src="media/hotel/noche.jpg" data-a="a_noche" alt="" width="960" height="1280">
- <div><div class="eyebrow" data-i="neye"></div><h2 data-i="nt"></h2><p data-i="np"></p></div>
-</div></section>
 
-<section id="grupos"><h2 data-i="wt"></h2>
- <p data-i="wp"></p>
- <div class="who">
-  <button type="button" class="wcard" data-w="pareja"><span class="wi" aria-hidden="true">♡</span><strong data-i="w1t"></strong><span data-i="w1p"></span><em data-i="wgo"></em></button>
-  <button type="button" class="wcard" data-w="familia"><span class="wi" aria-hidden="true">⌂</span><strong data-i="w2t"></strong><span data-i="w2p"></span><em data-i="wgo"></em></button>
-  <button type="button" class="wcard" data-w="amigos"><span class="wi" aria-hidden="true">☼</span><strong data-i="w3t"></strong><span data-i="w3p"></span><em data-i="wgo"></em></button>
-  <button type="button" class="wcard" data-w="solo"><span class="wi" aria-hidden="true">◎</span><strong data-i="w5t"></strong><span data-i="w5p"></span><em data-i="wgo"></em></button>
-  <button type="button" class="wcard" data-w="grupo"><span class="wi" aria-hidden="true">✦</span><strong data-i="w4t"></strong><span data-i="w4p"></span><em data-i="wgo2"></em></button>
-  <button type="button" class="wcard" data-w="celebra"><span class="wi" aria-hidden="true">✧</span><strong data-i="w6t"></strong><span data-i="w6p"></span><em data-i="wgo3"></em></button>
+<section id="habitaciones"><h2 data-i="rt"></h2>
+ <div class="grid two">
+  <div class="card feat"><img class="cimg" loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960" style="object-position:center 33%"><span class="badge" data-i="feat"></span><h3 data-i="sup"></h3><p data-i="d2"></p><p class="small" data-i="featn"></p></div>
+  <div class="card"><h3 data-i="std"></h3><p data-i="d1"></p></div>
  </div>
- <div id="gq" class="card" style="margin-top:1.6rem">
- <h3 data-i="gt"></h3>
- <p data-i="gp"></p>
- <ul class="pol"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li></ul>
- <a class="cta" id="wag" href="#" target="_blank" rel="noopener" data-i="gcta" style="max-width:420px"></a>
+ <div class="gal">
+  <img loading="lazy" src="media/hotel/ventanales.jpg" data-a="a_vent" alt="" width="912" height="540">
+  <img loading="lazy" src="media/hotel/escritorio.jpg" data-a="a_escr" alt="" width="1191" height="540">
+  <img loading="lazy" src="media/hotel/bano.jpg" data-a="a_bano" alt="" width="998" height="540">
  </div>
- <div id="cel" class="card" style="margin-top:1.2rem">
- <h3 data-i="cet"></h3>
- <p data-i="cep"></p>
- <p data-i="cep2"></p>
- <a class="cta" id="wac" href="#" target="_blank" rel="noopener" data-i="ccta" style="max-width:420px"></a>
+ <h3 style="margin-top:1.6rem" data-i="h5"></h3>
+ <div class="gal gal6">
+  <img loading="lazy" src="media/hotel/hab5-1.jpg" data-a="a_h51" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab5-2.jpg" data-a="a_h52" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab5-3.jpg" data-a="a_h53" alt="" width="720" height="960">
  </div>
+ <p class="cap" data-i="h5n"></p>
+ <h3 style="margin-top:1.6rem" data-i="h6"></h3>
+ <div class="gal gal6">
+  <img loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab6-2.jpg" data-a="a_h62" alt="" width="720" height="960">
+  <img loading="lazy" src="media/hotel/hab6-3.jpg" data-a="a_h63" alt="" width="720" height="960">
+ </div>
+ <p class="small" data-i="gnote"></p>
 </section>
 
 <section id="presupuesto">
@@ -541,6 +499,80 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
  <a class="cta discover" href="#habitaciones" data-i="disc" style="margin:1.6rem auto 0"></a>
 </section>
 
+<div id="pk2">
+<section id="tours">
+ <div class="pk-eyebrow" data-pk="t_eye"></div>
+ <h2 data-pk="t_t"></h2>
+ <p data-pk="t_p"></p>
+ <div class="pk-tours" id="tourgrid"></div>
+ <div class="pk-wet">
+  <img src="media/hotel/snorkel.jpg" data-pka="a_snk" alt="" width="921" height="540" loading="lazy">
+  <div><h3 data-pk="wet_t"></h3><p data-pk="wet_p" style="margin:0"></p></div>
+ </div>
+ <div class="pk-cart" id="cart" hidden>
+  <div><div class="pk-small" style="color:#BFD9D5" id="ct_list"></div><div class="pk-ct" id="ct_tot"></div></div>
+  <div><label for="tpax" style="color:#BFD9D5" data-pk="c_pax"></label><select id="tpax"></select></div>
+  <a class="pk-btn" id="wa_tours" href="#" target="_blank" rel="noopener" data-pk="t_cta"></a>
+ </div>
+</section>
+
+<!-- FREE TIME -->
+<section>
+ <div class="pk-eyebrow" data-pk="f_eye"></div>
+ <h2 data-pk="f_t"></h2>
+ <p data-pk="f_p"></p>
+ <div class="pk-free">
+  <div class="pk-fi"><b data-pk="f1t"></b><span data-pk="f1p"></span></div>
+  <div class="pk-fi"><b data-pk="f2t"></b><span data-pk="f2p"></span></div>
+  <div class="pk-fi"><img src="media/isla/muro-lagrimas.jpg" data-pka="a_muro" alt="" width="1280" height="851" loading="lazy"><b data-pk="f3t"></b><span data-pk="f3p"></span></div>
+  <div class="pk-fi"><b data-pk="f4t"></b><span data-pk="f4p"></span></div>
+ </div>
+</section>
+
+<!-- INCLUDES / HOW -->
+<section>
+ <h2 data-pk="i_t"></h2>
+ <div class="pk-cols">
+  <div class="pk-box"><h3 data-pk="i_yes"></h3><ul><li data-pk="y1"></li><li data-pk="y2"></li><li data-pk="y3"></li><li data-pk="y4"></li><li data-pk="y5"></li></ul></div>
+  <div class="pk-box pk-no"><h3 data-pk="i_no"></h3><ul><li data-pk="n1"></li><li data-pk="n2"></li><li data-pk="n3"></li><li data-pk="n4"></li></ul></div>
+ </div>
+ <h3 style="margin-top:2rem" data-pk="h_t"></h3>
+ <ol class="pk-steps"><li data-pk="s1"></li><li data-pk="s2"></li><li data-pk="s3"></li><li data-pk="s4"></li></ol>
+</section>
+
+
+</div>
+<section id="noche"><div class="night">
+ <img loading="lazy" src="media/hotel/noche.jpg" data-a="a_noche" alt="" width="960" height="1280">
+ <div><div class="eyebrow" data-i="neye"></div><h2 data-i="nt"></h2><p data-i="np"></p></div>
+</div></section>
+
+<section id="grupos"><h2 data-i="wt"></h2>
+ <p data-i="wp"></p>
+ <div class="who">
+  <button type="button" class="wcard" data-w="pareja"><span class="wi" aria-hidden="true">♡</span><strong data-i="w1t"></strong><span data-i="w1p"></span><em data-i="wgo"></em></button>
+  <button type="button" class="wcard" data-w="familia"><span class="wi" aria-hidden="true">⌂</span><strong data-i="w2t"></strong><span data-i="w2p"></span><em data-i="wgo"></em></button>
+  <button type="button" class="wcard" data-w="amigos"><span class="wi" aria-hidden="true">☼</span><strong data-i="w3t"></strong><span data-i="w3p"></span><em data-i="wgo"></em></button>
+  <button type="button" class="wcard" data-w="solo"><span class="wi" aria-hidden="true">◎</span><strong data-i="w5t"></strong><span data-i="w5p"></span><em data-i="wgo"></em></button>
+  <button type="button" class="wcard" data-w="grupo"><span class="wi" aria-hidden="true">✦</span><strong data-i="w4t"></strong><span data-i="w4p"></span><em data-i="wgo2"></em></button>
+  <button type="button" class="wcard" data-w="celebra"><span class="wi" aria-hidden="true">✧</span><strong data-i="w6t"></strong><span data-i="w6p"></span><em data-i="wgo3"></em></button>
+ </div>
+ <div id="gq" class="card" style="margin-top:1.6rem">
+ <h3 data-i="gt"></h3>
+ <p data-i="gp"></p>
+ <ul class="pol"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li></ul>
+ <a class="cta" id="wag" href="#" target="_blank" rel="noopener" data-i="gcta" style="max-width:420px"></a>
+ </div>
+ <div id="cel" class="card" style="margin-top:1.2rem">
+ <h3 data-i="cet"></h3>
+ <p data-i="cep"></p>
+ <p data-i="cep2"></p>
+ <a class="cta" id="wac" href="#" target="_blank" rel="noopener" data-i="ccta" style="max-width:420px"></a>
+ </div>
+</section>
+
+
+
 <section class="storysec" id="historia">
  <div class="story">
   <div>
@@ -557,31 +589,7 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
  </div>
 </section>
 
-<section id="habitaciones"><h2 data-i="rt"></h2>
- <div class="grid two">
-  <div class="card feat"><img class="cimg" loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960" style="object-position:center 33%"><span class="badge" data-i="feat"></span><h3 data-i="sup"></h3><p data-i="d2"></p><p class="small" data-i="featn"></p></div>
-  <div class="card"><h3 data-i="std"></h3><p data-i="d1"></p></div>
- </div>
- <div class="gal">
-  <img loading="lazy" src="media/hotel/ventanales.jpg" data-a="a_vent" alt="" width="912" height="540">
-  <img loading="lazy" src="media/hotel/escritorio.jpg" data-a="a_escr" alt="" width="1191" height="540">
-  <img loading="lazy" src="media/hotel/bano.jpg" data-a="a_bano" alt="" width="998" height="540">
- </div>
- <h3 style="margin-top:1.6rem" data-i="h5"></h3>
- <div class="gal gal6">
-  <img loading="lazy" src="media/hotel/hab5-1.jpg" data-a="a_h51" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab5-2.jpg" data-a="a_h52" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab5-3.jpg" data-a="a_h53" alt="" width="720" height="960">
- </div>
- <p class="cap" data-i="h5n"></p>
- <h3 style="margin-top:1.6rem" data-i="h6"></h3>
- <div class="gal gal6">
-  <img loading="lazy" src="media/hotel/hab6-1.jpg" data-a="a_h61" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab6-2.jpg" data-a="a_h62" alt="" width="720" height="960">
-  <img loading="lazy" src="media/hotel/hab6-3.jpg" data-a="a_h63" alt="" width="720" height="960">
- </div>
- <p class="small" data-i="gnote"></p>
-</section>
+
 
 <section><h2 data-i="st"></h2>
  <ul class="pol svc">
@@ -776,7 +784,7 @@ var TOURS=[
 ];
 var T={
 es:{
-cap1:'Sierra Negra y Volcán Chico',cap2:'Rayas bajo el agua en Los Túneles',cap3:'En bicicleta por Isabela',refph:'Foto de referencia del lugar',a_crat:'Laderas rojizas y negras del volcán Sierra Negra',a_ping:'Pingüino de Galápagos sobre roca volcánica en Isabela',a_lobo:'Lobo marino joven sobre la arena en Las Tintoreras',a_chico:'Excursionistas en el borde de un cráter del Volcán Chico',a_muro:'Piedras volcánicas del Muro de las Lágrimas',a_pisc2:'Piscina de The Wooden House Lodge',a_tun:'Pozas de agua turquesa entre lava negra en Los Túneles',a_raya:'Dos rayas nadando en agua verde azulada',a_lobo2:'Lobo marino nadando bajo el agua',a_fam:'Familia con bicicletas en una playa de arena',a_bahia:'Dos viajeras en aguas claras y poco profundas de una laguna en Isabela',a_huesp:'Huéspedes sonriendo junto a la piscina de The Wooden House',a_pareja:'Pareja conversando en el jardín del hotel bajo las sombrillas',a_vch:'Cono del Volcán Chico entre campos de lava y vegetación',a_hvid:'Video del hotel: habitaciones de madera, alquiler de neopreno y sendero',cred:'Fotos y videos: The Wooden House Lodge (@woodenhouse.ec) y Alexander Schimmeck (Unsplash).',
+v_eye:'Isla Isabela',v_t:'Esto es lo que vas a vivir',v_p:'Mar abierto, lobos marinos, rayas y fragatas. Así se ve Isabela desde el agua.',a_fach:'Fachada de The Wooden House Lodge con su piscina y jardín',cap1:'Sierra Negra y Volcán Chico',cap2:'Rayas bajo el agua en Los Túneles',cap3:'En bicicleta por Isabela',refph:'Foto de referencia del lugar',a_crat:'Laderas rojizas y negras del volcán Sierra Negra',a_ping:'Pingüino de Galápagos sobre roca volcánica en Isabela',a_lobo:'Lobo marino joven sobre la arena en Las Tintoreras',a_chico:'Excursionistas en el borde de un cráter del Volcán Chico',a_muro:'Piedras volcánicas del Muro de las Lágrimas',a_pisc2:'Piscina de The Wooden House Lodge',a_tun:'Pozas de agua turquesa entre lava negra en Los Túneles',a_raya:'Dos rayas nadando en agua verde azulada',a_lobo2:'Lobo marino nadando bajo el agua',a_fam:'Familia con bicicletas en una playa de arena',a_bahia:'Dos viajeras en aguas claras y poco profundas de una laguna en Isabela',a_huesp:'Huéspedes sonriendo junto a la piscina de The Wooden House',a_pareja:'Pareja conversando en el jardín del hotel bajo las sombrillas',a_vch:'Cono del Volcán Chico entre campos de lava y vegetación',a_hvid:'Video del hotel: habitaciones de madera, alquiler de neopreno y sendero',cred:'Fotos y videos: The Wooden House Lodge (@woodenhouse.ec) y Alexander Schimmeck (Unsplash).',
 h_eye:'Packs Isabela · Galápagos',
 h1:'Isabela, sin prisa. Todo resuelto.',
 h_sub:'Hotel con desayuno y tours con guía, en un solo pago. Tú solo eliges cuántas noches de mar quieres.',
@@ -852,7 +860,7 @@ msg_tours:'Hola, me interesan estos tours para {px}:\n{list}\nTotal: {tot}\n¿Qu
 nodate:'por definir'
 },
 en:{
-cap1:'Sierra Negra and Volcán Chico',cap2:'Rays underwater at Los Túneles',cap3:'Biking around Isabela',refph:'Reference photo of the site',a_crat:'Red and black slopes of Sierra Negra volcano',a_ping:'Galápagos penguin on volcanic rock on Isabela',a_lobo:'Young sea lion on the sand at Las Tintoreras',a_chico:'Hikers on the rim of a Volcán Chico crater',a_muro:'Volcanic stones of the Wall of Tears',a_pisc2:'The Wooden House Lodge pool',a_tun:'Turquoise pools among black lava at Los Túneles',a_raya:'Two rays swimming in blue-green water',a_lobo2:'Sea lion swimming underwater',a_fam:'Family with bikes on a sandy beach',a_bahia:'Two travelers in clear, shallow lagoon water on Isabela',a_huesp:'Guests smiling by The Wooden House pool',a_pareja:'Couple chatting in the lodge garden under the umbrellas',a_vch:'Volcán Chico cone among lava fields and greenery',a_hvid:'Lodge video: wooden rooms, wetsuit rental and trail',cred:'Photos and videos: The Wooden House Lodge (@woodenhouse.ec) and Alexander Schimmeck (Unsplash).',
+v_eye:'Isabela Island',v_t:'This is what you’ll experience',v_p:'Open sea, sea lions, rays and frigatebirds. This is Isabela from the water.',a_fach:'The Wooden House Lodge facade with its pool and garden',cap1:'Sierra Negra and Volcán Chico',cap2:'Rays underwater at Los Túneles',cap3:'Biking around Isabela',refph:'Reference photo of the site',a_crat:'Red and black slopes of Sierra Negra volcano',a_ping:'Galápagos penguin on volcanic rock on Isabela',a_lobo:'Young sea lion on the sand at Las Tintoreras',a_chico:'Hikers on the rim of a Volcán Chico crater',a_muro:'Volcanic stones of the Wall of Tears',a_pisc2:'The Wooden House Lodge pool',a_tun:'Turquoise pools among black lava at Los Túneles',a_raya:'Two rays swimming in blue-green water',a_lobo2:'Sea lion swimming underwater',a_fam:'Family with bikes on a sandy beach',a_bahia:'Two travelers in clear, shallow lagoon water on Isabela',a_huesp:'Guests smiling by The Wooden House pool',a_pareja:'Couple chatting in the lodge garden under the umbrellas',a_vch:'Volcán Chico cone among lava fields and greenery',a_hvid:'Lodge video: wooden rooms, wetsuit rental and trail',cred:'Photos and videos: The Wooden House Lodge (@woodenhouse.ec) and Alexander Schimmeck (Unsplash).',
 h_eye:'Isabela Packs · Galápagos',
 h1:'Isabela, unhurried. All taken care of.',
 h_sub:'Your hotel with breakfast and guided tours, in a single payment. All you choose is how many nights by the sea.',
