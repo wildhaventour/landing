@@ -761,7 +761,7 @@ var WA='593995003954';
 var RACK={est:{1:125,2:149,3:192},sup:{1:192,2:215,3:241}};
 var LAUNCH={est:{},sup:{}};['est','sup'].forEach(function(c){[1,2,3].forEach(function(p){LAUNCH[c][p]=Math.ceil(RACK[c][p]*0.9)})});
 var LAUNCH_END='2026-11-30',LAUNCH_ARR='2026-12-20';
-var TRANSFER=80; // transfer + asistencia ida y vuelta, grupo 1-4
+var TRANSFER=0; // transfer + asistencia ida y vuelta, grupo 1-4
 var PACK={relax:{n:3,tours:75},adv:{n:4,tours:250,swap:15}};
 var TOURS=[
  {k:'tun',p:130,img:'tun',photo:'media/isla/tuneles.jpg',alt:'a_tun'},{k:'tin',p:65,img:'tin',photo:'media/isla/lobo-marino-agua.jpg',alt:'a_lobo2'},{k:'kay',p:60,img:'kay',photo:'media/isla/laguna-isabela.jpg',alt:'a_bahia'},{k:'vol',p:55,img:'vol',photo:'media/hotel/volcan-chico-hotel.jpg',alt:'a_vch'},{k:'azu',p:70,img:'azu'}
@@ -771,7 +771,7 @@ es:{
 cap1:'Sierra Negra y Volcán Chico',cap2:'Rayas bajo el agua en Los Túneles',cap3:'En bicicleta por Isabela',refph:'Foto de referencia del lugar',a_crat:'Laderas rojizas y negras del volcán Sierra Negra',a_ping:'Pingüino de Galápagos sobre roca volcánica en Isabela',a_lobo:'Lobo marino joven sobre la arena en Las Tintoreras',a_chico:'Excursionistas en el borde de un cráter del Volcán Chico',a_muro:'Piedras volcánicas del Muro de las Lágrimas',a_pisc2:'Piscina de The Wooden House Lodge',a_tun:'Pozas de agua turquesa entre lava negra en Los Túneles',a_raya:'Dos rayas nadando en agua verde azulada',a_lobo2:'Lobo marino nadando bajo el agua',a_fam:'Familia con bicicletas en una playa de arena',a_bahia:'Dos viajeras en aguas claras y poco profundas de una laguna en Isabela',a_huesp:'Huéspedes sonriendo junto a la piscina de The Wooden House',a_pareja:'Pareja conversando en el jardín del hotel bajo las sombrillas',a_vch:'Cono del Volcán Chico entre campos de lava y vegetación',a_hvid:'Video del hotel: habitaciones de madera, alquiler de neopreno y sendero',cred:'Fotos y videos: The Wooden House Lodge (@woodenhouse.ec) y Alexander Schimmeck (Unsplash).',
 h_eye:'Packs Isabela · Galápagos',
 h1:'Isabela, sin prisa. Todo resuelto.',
-h_sub:'Hotel con desayuno, tours con guía y traslado con asistencia, en un solo pago. Tú solo eliges cuántas noches de mar quieres.',
+h_sub:'Hotel con desayuno y tours con guía, en un solo pago. Tú solo eliges cuántas noches de mar quieres.',
 lnch_badge:'Oferta de lanzamiento: reservas hasta el 30 de noviembre',
 h_cta:'Ver los packs',h_cta2:'Solo necesito habitación',
 w_eye:'Por qué Isabela',
@@ -785,21 +785,21 @@ p_t:'Dos maneras de vivir Isabela',
 p_p:'Precio final por persona, sin cargos escondidos. Todo se paga en una sola reserva.',
 r_n:'3 noches · 4 días',r_eye:'Para ir a tu ritmo',
 r_for:'Para parejas, familias y quienes quieren ver la vida marina sin madrugar todos los días.',
-r_i1:'3 noches en The Wooden House con desayuno',r_i2:'Kayak y snorkel en Concha Perla, con guía',r_i3:'Bicicleta 4 horas al Muro de las Lágrimas',r_i4:'Traslado con asistencia, ida y vuelta',r_i5:'Tiempo libre: playa, humedales y atardeceres',
+r_i1:'3 noches en The Wooden House con desayuno',r_i2:'Kayak y snorkel en Concha Perla, con guía',r_i3:'Bicicleta 4 horas al Muro de las Lágrimas',r_i4:'Te recibimos en el muelle de Puerto Villamil',r_i5:'Tiempo libre: playa, humedales y atardeceres',
 a_tag:'El más completo',a_n:'4 noches · 5 días',a_eye:'Mar y volcán',
 a_for:'Para quienes vienen a ver lo mejor de Isabela: arcos de lava bajo el agua, el canal de tiburones y el cráter de Sierra Negra.',
-a_i1:'4 noches en The Wooden House con desayuno',a_i2:'Los Túneles (Cabo Rosa): snorkel entre arcos de lava, con almuerzo',a_i3:'Las Tintoreras: canal de tiburones, iguanas y snorkel',a_i4:'Sierra Negra y Volcán Chico: caminata con box lunch',a_i5:'Traslado con asistencia, ida y vuelta',a_i6:'Tiempo libre: Concha Perla, playa y atardeceres',
+a_i1:'4 noches en The Wooden House con desayuno',a_i2:'Los Túneles (Cabo Rosa): snorkel entre arcos de lava, con almuerzo',a_i3:'Las Tintoreras: canal de tiburones, iguanas y snorkel',a_i4:'Sierra Negra y Volcán Chico: caminata con box lunch',a_i5:'Te recibimos en el muelle de Puerto Villamil',a_i6:'Tiempo libre: Concha Perla, playa y atardeceres',
 from:'desde',pp_note:'por persona, en habitación Estándar para dos',
 itin:'Ver el día a día',
 r_d1t:'Día 1 · Llegada',r_d1:'Te recibimos en el muelle y te acompañamos al hotel. Tarde libre y primer atardecer en la playa de Puerto Villamil.',
 r_d2t:'Día 2 · Kayak y snorkel',r_d2:'Remas entre manglares y luego haces snorkel en las aguas tranquilas y poco profundas de Concha Perla. Salida a las 7:30 o a las 12:30.',
 r_d3t:'Día 3 · En bicicleta',r_d3:'Pedaleas por los humedales hasta el Muro de las Lágrimas, con paradas en lagunas y miradores. Tarde de piscina.',
-r_d4t:'Día 4 · Salida',r_d4:'Desayuno y traslado con asistencia al muelle.',
+r_d4t:'Día 4 · Salida',r_d4:'Desayuno y despedida. Te ayudamos a coordinar tu salida al muelle.',
 a_d1t:'Día 1 · Llegada',a_d1:'Te recibimos en el muelle y te acompañamos al hotel. Tarde libre y atardecer en la playa.',
 a_d2t:'Día 2 · Sierra Negra',a_d2:'Salida 7:30. Unas 5 horas entre lava, la caldera y el Volcán Chico. Incluye box lunch.',
 a_d3t:'Día 3 · Los Túneles',a_d3:'Navegas hacia Cabo Rosa para hacer snorkel entre arcos de lava. Incluye almuerzo.',
 a_d4t:'Día 4 · Las Tintoreras',a_d4:'Paseo en barco, caminata entre iguanas y el canal de tiburones, y snorkel. Tarde libre.',
-a_d5t:'Día 5 · Salida',a_d5:'Desayuno y traslado con asistencia al muelle.',
+a_d5t:'Día 5 · Salida',a_d5:'Desayuno y despedida. Te ayudamos a coordinar tu salida al muelle.',
 pick:'Elegir este pack',
 c_t:'Arma tu reserva',c_p:'Cambia la habitación, las personas o la fecha y el precio se actualiza solo.',
 c_room:'Habitación',c_pax:'Personas',c_arr:'Llegada a Isabela',c_xn:'Noches extra',c_nm:'Tu nombre',
@@ -829,8 +829,8 @@ f4t:'Atardecer en Puerto Villamil',f4p:'La playa larga del pueblo, a la hora en 
 b_eye:'Tu base',b_t:'The Wooden House Lodge',b_p:'Madera, piscina y desayuno incluido, en Puerto Villamil. Volver aquí después de un día de mar también es parte del viaje.',
 b_meals:'Almuerzos y cenas en el hotel: pregúntanos al reservar.',
 i_t:'Qué incluye y qué no',i_yes:'Incluye',i_no:'No incluye',
-y1:'Alojamiento en The Wooden House con desayuno',y2:'Los tours del pack con guía',y3:'Traslado con asistencia muelle–hotel–muelle',y4:'Atención en español e inglés antes y durante el viaje',y5:'Un solo pago a la cuenta del hotel',
-n1:'Vuelos y ferry entre islas',n2:'Entrada al Parque Nacional Galápagos y Tarjeta de Control de Tránsito (TCT)',n3:'Traje de neopreno, propinas y bebidas alcohólicas',n4:'Almuerzos y cenas fuera de los tours',
+y1:'Alojamiento en The Wooden House con desayuno',y2:'Los tours del pack con guía',y3:'Recibimiento en el muelle y acompañamiento a pie hasta el hotel',y4:'Atención en español e inglés antes y durante el viaje',y5:'Un solo pago a la cuenta del hotel',
+n1:'Vuelos y ferry entre islas',n2:'Entrada al Parque Nacional Galápagos y Tarjeta de Control de Tránsito (TCT)',n3:'Traje de neopreno, propinas, bebidas alcohólicas y traslado en vehículo (a solicitud)',n4:'Almuerzos y cenas fuera de los tours',
 h_t:'Cómo reservar',
 s1:'Elige tu pack y escríbenos por WhatsApp con el mensaje ya armado.',s2:'Confirmamos disponibilidad con el hotel y el operador.',s3:'Apartas con un abono del 20% (50% en fin de año) a la cuenta del hotel.',s4:'Antes del viaje te enviamos tu itinerario día por día.',
 so_eye:'¿Prefieres armar tu viaje?',so_t:'Solo habitación, y tours si quieres',so_p:'Reserva solo el alojamiento con nuestro cotizador y suma los tours que te gusten. Tú decides.',
@@ -847,7 +847,7 @@ en:{
 cap1:'Sierra Negra and Volcán Chico',cap2:'Rays underwater at Los Túneles',cap3:'Biking around Isabela',refph:'Reference photo of the site',a_crat:'Red and black slopes of Sierra Negra volcano',a_ping:'Galápagos penguin on volcanic rock on Isabela',a_lobo:'Young sea lion on the sand at Las Tintoreras',a_chico:'Hikers on the rim of a Volcán Chico crater',a_muro:'Volcanic stones of the Wall of Tears',a_pisc2:'The Wooden House Lodge pool',a_tun:'Turquoise pools among black lava at Los Túneles',a_raya:'Two rays swimming in blue-green water',a_lobo2:'Sea lion swimming underwater',a_fam:'Family with bikes on a sandy beach',a_bahia:'Two travelers in clear, shallow lagoon water on Isabela',a_huesp:'Guests smiling by The Wooden House pool',a_pareja:'Couple chatting in the lodge garden under the umbrellas',a_vch:'Volcán Chico cone among lava fields and greenery',a_hvid:'Lodge video: wooden rooms, wetsuit rental and trail',cred:'Photos and videos: The Wooden House Lodge (@woodenhouse.ec) and Alexander Schimmeck (Unsplash).',
 h_eye:'Isabela Packs · Galápagos',
 h1:'Isabela, unhurried. All taken care of.',
-h_sub:'Your hotel with breakfast, guided tours and assisted transfers, in a single payment. All you choose is how many nights by the sea.',
+h_sub:'Your hotel with breakfast and guided tours, in a single payment. All you choose is how many nights by the sea.',
 lnch_badge:'Launch offer: book by November 30',
 h_cta:'See the packs',h_cta2:'I just need a room',
 w_eye:'Why Isabela',
@@ -861,21 +861,21 @@ p_t:'Two ways to experience Isabela',
 p_p:'Final price per person, no hidden fees. Everything is paid in one booking.',
 r_n:'3 nights · 4 days',r_eye:'At your own pace',
 r_for:'For couples, families and anyone who wants to see the marine life without an early start every day.',
-r_i1:'3 nights at The Wooden House with breakfast',r_i2:'Guided kayaking and snorkeling at Concha Perla',r_i3:'4-hour bike ride to the Wall of Tears',r_i4:'Round-trip assisted transfer',r_i5:'Free time: beach, wetlands and sunsets',
+r_i1:'3 nights at The Wooden House with breakfast',r_i2:'Guided kayaking and snorkeling at Concha Perla',r_i3:'4-hour bike ride to the Wall of Tears',r_i4:'We meet you at the Puerto Villamil pier',r_i5:'Free time: beach, wetlands and sunsets',
 a_tag:'The full experience',a_n:'4 nights · 5 days',a_eye:'Sea and volcano',
 a_for:'For travelers who came for the best of Isabela: lava arches underwater, the shark channel and the Sierra Negra crater.',
-a_i1:'4 nights at The Wooden House with breakfast',a_i2:'Los Túneles (Cabo Rosa): snorkeling among lava arches, lunch included',a_i3:'Las Tintoreras: shark channel, iguanas and snorkeling',a_i4:'Sierra Negra and Volcán Chico hike, box lunch included',a_i5:'Round-trip assisted transfer',a_i6:'Free time: Concha Perla, beach and sunsets',
+a_i1:'4 nights at The Wooden House with breakfast',a_i2:'Los Túneles (Cabo Rosa): snorkeling among lava arches, lunch included',a_i3:'Las Tintoreras: shark channel, iguanas and snorkeling',a_i4:'Sierra Negra and Volcán Chico hike, box lunch included',a_i5:'We meet you at the Puerto Villamil pier',a_i6:'Free time: Concha Perla, beach and sunsets',
 from:'from',pp_note:'per person, Standard room for two',
 itin:'See day by day',
 r_d1t:'Day 1 · Arrival',r_d1:'We meet you at the pier and walk you to the lodge. Free afternoon and your first sunset on Puerto Villamil beach.',
 r_d2t:'Day 2 · Kayak and snorkel',r_d2:'Paddle past the mangroves, then snorkel in the calm, shallow water of Concha Perla. Starts at 7:30 am or 12:30 pm.',
 r_d3t:'Day 3 · By bike',r_d3:'Ride through the wetlands to the Wall of Tears, with stops at lagoons and lookouts. Pool time in the afternoon.',
-r_d4t:'Day 4 · Departure',r_d4:'Breakfast and assisted transfer to the pier.',
+r_d4t:'Day 4 · Departure',r_d4:'Breakfast and goodbyes. We help you plan your way back to the pier.',
 a_d1t:'Day 1 · Arrival',a_d1:'We meet you at the pier and walk you to the lodge. Free afternoon and sunset on the beach.',
 a_d2t:'Day 2 · Sierra Negra',a_d2:'Leaves at 7:30 am. About 5 hours across lava fields, the caldera and Volcán Chico. Box lunch included.',
 a_d3t:'Day 3 · Los Túneles',a_d3:'Boat ride to Cabo Rosa to snorkel among lava arches. Lunch included.',
 a_d4t:'Day 4 · Las Tintoreras',a_d4:'Boat ride, a walk among marine iguanas and the shark channel, then snorkeling. Free afternoon.',
-a_d5t:'Day 5 · Departure',a_d5:'Breakfast and assisted transfer to the pier.',
+a_d5t:'Day 5 · Departure',a_d5:'Breakfast and goodbyes. We help you plan your way back to the pier.',
 pick:'Choose this pack',
 c_t:'Plan your trip',c_p:'Change the room, guests or date and the price updates on its own.',
 c_room:'Room',c_pax:'Guests',c_arr:'Arrival on Isabela',c_xn:'Extra nights',c_nm:'Your name',
@@ -905,8 +905,8 @@ f4t:'Sunset in Puerto Villamil',f4p:'The town’s long beach, right when the sky
 b_eye:'Your home base',b_t:'The Wooden House Lodge',b_p:'Wood, a pool and breakfast included, in Puerto Villamil. Coming back here after a day at sea is part of the trip.',
 b_meals:'Lunch and dinner at the lodge: just ask when you book.',
 i_t:'What’s included and what’s not',i_yes:'Included',i_no:'Not included',
-y1:'Stay at The Wooden House with breakfast',y2:'Guided tours included in your pack',y3:'Assisted transfers between the pier and the lodge',y4:'Support in English and Spanish before and during your trip',y5:'One payment, made to the lodge’s account',
-n1:'Flights and inter-island ferry',n2:'Galápagos National Park entrance fee and Transit Control Card (TCT)',n3:'Wetsuit, tips and alcoholic drinks',n4:'Lunches and dinners outside the tours',
+y1:'Stay at The Wooden House with breakfast',y2:'Guided tours included in your pack',y3:'A welcome at the pier and a short walk with us to the lodge',y4:'Support in English and Spanish before and during your trip',y5:'One payment, made to the lodge’s account',
+n1:'Flights and inter-island ferry',n2:'Galápagos National Park entrance fee and Transit Control Card (TCT)',n3:'Wetsuit, tips, alcoholic drinks and vehicle transfers (on request)',n4:'Lunches and dinners outside the tours',
 h_t:'How to book',
 s1:'Pick your pack and message us on WhatsApp. The message is already written for you.',s2:'We confirm availability with the lodge and the tour operator.',s3:'A 20% deposit (50% over the holidays) to the lodge’s account holds your spot.',s4:'Before your trip, we send your day-by-day itinerary.',
 so_eye:'Prefer to plan it yourself?',so_t:'Just a room, plus tours if you like',so_p:'Get a quote for just your stay with our price calculator, then add any tours you like. Your call.',
@@ -952,7 +952,7 @@ function calc(){
  $('o_pp').textContent=usd(r.pp);$('o_was').textContent=ln&&rg.pp>r.pp?usd(rg.pp):'';
  var tot=r.pp*S.pax;$('o_tot').textContent=usd(tot);
  var lines=$('o_lines');lines.textContent='';
- [[t.l_hotel+' · '+r.nights+' '+(r.nights===1?t.night1:t.nightN),usd(r.hotel)],[t.l_tours,usd(r.tours)],[t.l_tr,usd(r.tr)]].forEach(function(x){var d=document.createElement('div');var a=document.createElement('span');a.textContent=x[0];var b=document.createElement('span');b.textContent=x[1];d.appendChild(a);d.appendChild(b);lines.appendChild(d)});
+ [[t.l_hotel+' · '+r.nights+' '+(r.nights===1?t.night1:t.nightN),usd(r.hotel)],[t.l_tours,usd(r.tours)]].forEach(function(x){var d=document.createElement('div');var a=document.createElement('span');a.textContent=x[0];var b=document.createElement('span');b.textContent=x[1];d.appendChild(a);d.appendChild(b);lines.appendChild(d)});
  $('o_note').textContent=(ln?t.note_l:t.note_r);
  $('swapbox').hidden=S.pk!=='adv';
  $('b-relax').setAttribute('aria-pressed',S.pk==='relax');$('b-adv').setAttribute('aria-pressed',S.pk==='adv');
