@@ -129,7 +129,7 @@ footer{padding:2rem 0 5rem;color:var(--muted);font-size:.9rem}
 .gal img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;display:block;background:var(--sea)}
 .svc{columns:1;padding-left:1.2rem;margin:0 0 1rem;max-width:none}@media(min-width:700px){.svc{columns:2;column-gap:2rem}}.svc li{margin-bottom:.45rem;break-inside:avoid}
 /* hero */
-.pk-hero{position:relative;border-radius:18px;overflow:hidden;background:var(--deep);color:#fff;min-height:720px;display:flex;align-items:flex-end;margin-bottom:1rem}@media(min-width:760px){.pk-hero{min-height:560px}}
+.pk-hero{position:relative;border-radius:18px;overflow:hidden;background:var(--deep);color:#fff;min-height:720px;display:flex;align-items:flex-end;margin-bottom:1rem}
 .pk-hero .pk-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pk-hero .pk-in{position:relative;padding:2rem 1.3rem 1.6rem;width:100%;background:linear-gradient(to top,rgba(6,30,36,.95) 0%,rgba(6,30,36,.8) 55%,rgba(6,30,36,0) 100%)}
 .pk-hero .pk-eyebrow{color:#FFD27A}
@@ -248,10 +248,13 @@ select,input{width:100%;padding:.65rem;border-radius:8px;border:1px solid var(--
 #pk{--deep:#0B3A44}
 #pk + .hero{border-top:1px solid var(--line);margin-top:1.4rem;padding-top:2.2rem}
 :root{--deep:#0B3A44}
-.pk-hero img.pk-scene{object-position:center 60%}
+.pk-hero{display:block;min-height:0}
+.pk-hero img.pk-scene{position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center}
+.pk-hero .pk-in{background:var(--deep)}
+@media(min-width:900px){.pk-hero{display:grid;grid-template-columns:1.35fr 1fr;min-height:0}.pk-hero img.pk-scene{height:100%;aspect-ratio:auto}.pk-hero .pk-in{display:flex;flex-direction:column;justify-content:center}}
 .pk-band{text-align:left}
 .pk-bandvid{width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;margin:1rem auto 0;background:#000}
-@media(min-width:760px){.pk-hero{min-height:560px}}
+
 .pk-eyebrow{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wood);font-weight:700;margin-bottom:.5rem}
 .pk-small{font-size:.88rem;color:var(--muted)}
 .hh{font-size:clamp(2rem,6vw,3.4rem);max-width:16ch;font-weight:600;letter-spacing:-.01em;line-height:1.1;margin:0 0 .6rem}
