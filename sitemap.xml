@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://wildhaventour.com/</loc><lastmod>2026-11-09</lastmod></url>
-  <url><loc>https://wildhaventour.com/legal.html</loc><lastmod>2026-10-28</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://wildhaventour.com/en/</loc><lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wildhaventour.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wildhaventour.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wildhaventour.com/en/"/>
+  </url>
+  <url><loc>https://wildhaventour.com/</loc><lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wildhaventour.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://wildhaventour.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wildhaventour.com/en/"/>
+  </url>
+  <url><loc>https://wildhaventour.com/legal.html</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>
