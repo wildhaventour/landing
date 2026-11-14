@@ -20,8 +20,8 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TravelAgency", "name": "Wild Haven Tour", "url": "https://wildhaventour.com/", "logo": "https://wildhaventour.com/media/apple-touch-icon.png", "image": "https://wildhaventour.com/media/hotel/fachada.jpg", "email": "bookings@wildhaventour.com", "telephone": "+593995003954", "address": {"@type": "PostalAddress", "addressLocality": "Quito", "addressCountry": "EC"}, "areaServed": {"@type": "Place", "name": "Isabela Island, Galápagos, Ecuador"}, "knowsLanguage": ["en", "es"], "description": "Stays and tour packs on Isabela Island, Galápagos, at The Wooden House Lodge in Puerto Villamil."}</script><!--/HEAD-->
 <link rel="icon" type="image/png" href="/media/favicon.png">
 <link rel="apple-touch-icon" href="/media/apple-touch-icon.png">
-<link rel="preload" href="/media/fonts/bricolage-grotesque-latin.woff" as="font" type="font/woff" crossorigin>
-<link rel="preload" href="/media/fonts/lora-latin.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/media/fonts/inter-regular-latin.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/media/fonts/interdisplay-medium-latin.woff" as="font" type="font/woff" crossorigin>
 <style>
 @font-face{font-family:"Inter";src:url("/media/fonts/inter-regular-latin.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"Inter";src:url("/media/fonts/inter-semibold-latin.woff") format("woff");font-weight:600 800;font-style:normal;font-display:swap}@font-face{font-family:"Inter Display";src:url("/media/fonts/interdisplay-medium-latin.woff") format("woff");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:"Inter Display";src:url("/media/fonts/interdisplay-semibold-latin.woff") format("woff");font-weight:600 700;font-style:normal;font-display:swap}
 :root{--bg:#EEF4F2;--surface:#fff;--ink:#16282B;--muted:#4C6468;--teal:#0E5457;--teal-ink:#fff;--sea:#BFE3DC;--wood:#8A5A36;--sun:#E3A82B;--line:#C9DAD6;
@@ -1349,6 +1349,18 @@ section.foldsec.storysec{background:none}
 details.fold{border:0;background:none;box-shadow:none}
 footer a{color:var(--teal);text-underline-offset:3px;text-decoration-thickness:1px}
 @media (prefers-reduced-motion:reduce){.cta,.pk-btn{transition:none}}
+</style>
+<style id="v5">
+/* 14/11/2026: tipografía en tres niveles y gris secundario con más contraste. Solo estilo. */
+:root{--muted:#445657}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--muted:#A3B6B3}}
+:root[data-theme="dark"]{--muted:#A3B6B3}
+/* nivel 2: secundario 15,2 px */
+label,.wcard em,.wcard span,footer p,.cns,.cns-pt,.cns-tt,#lbar{font-size:.95rem!important}
+/* nivel 3: nota 13,6 px */
+.small,.pk-small,.car-cap,.cap,figcaption,footer p.pk-small{font-size:.85rem!important;line-height:1.55}
+/* etiquetas: 12 px como mínimo */
+.badge,.pk-ph span,.pk-tag,.pk-tp small,.bd small,button small,.pk-hero .pk-lnch{font-size:.75rem!important}
 </style>
 </body>
 </html>
