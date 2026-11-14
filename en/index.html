@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <!--HEAD--><title>Wild Haven Tour | Isabela Island, Galápagos: Lodge Stays & Tour Packs</title>
 <link rel="canonical" href="https://wildhaventour.com/en/">
 <link rel="alternate" hreflang="es" href="https://wildhaventour.com/">
@@ -1334,5 +1335,43 @@ main section>h2::after,section>h2::after,.hero h2.hh::after,.hsv>h2::after{conte
 .pk-hero .pk-row{grid-column:2;grid-row:1/span 5;flex-direction:column!important;align-items:stretch;gap:.5rem;margin:0!important}
 .pk-hero .pk-row .pk-btn{padding:.6rem 1.1rem;min-height:44px;font-size:.92rem;text-align:center}
 }</style>
+<style id="v4">
+/* 14/11/2026: pulido minimalista. Solo estilo; no cambia textos, precios ni funciones. */
+:root{--shadow:0 1px 2px rgba(19,38,42,.04)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--shadow:none}}
+body{line-height:1.6}
+main p{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+section{padding:3rem 0}
+/* superficies: línea fina, sin sombras ni brillos */
+.card,.refs,.jstep,details,.calc,.wcard,.pk-pack,.pk-tour,.pk-box,.rfold{box-shadow:none;border:1px solid var(--line)}
+.jstep{border-top:1px solid var(--line)}
+.pk-box{border-left:1px solid var(--line)}
+.calc{border-color:var(--line)}
+.card.feat,.pk-pack.feat{border:1px solid var(--sun);box-shadow:none}
+.wcard:hover{box-shadow:none;border-color:var(--teal)}
+.night img{box-shadow:none}
+/* lista de servicios: de tarjetas a renglones con línea */
+.hl2{gap:0!important;border-top:1px solid var(--line)}
+.hl2 li{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none;padding:.8rem .1rem;font-weight:500}
+.hl2 li .ico{color:var(--teal)}
+/* botones: planos, un solo acento */
+.cta,.pk-btn{box-shadow:none;font-weight:600;letter-spacing:0;border-radius:10px}
+.cta:hover,.pk-btn:hover{box-shadow:none;transform:none;filter:brightness(.96)}
+.cta.discover{background:none;color:var(--teal);border:1px solid var(--teal)}
+.fold-btn{border-width:1px;font-weight:600}
+.badge{font-weight:600;letter-spacing:.08em;font-size:.7rem;background:none;color:var(--wood);border:1px solid var(--sun);padding:.2rem .6rem}
+/* aviso de lanzamiento: sobrio, con filete dorado */
+#lbar{background:none!important;border:0!important;border-left:2px solid var(--sun)!important;border-radius:0!important;padding:.1rem 0 .1rem .8rem!important;font-weight:600!important;color:var(--ink)}
+/* títulos un poco más ligeros y con aire */
+main section>h2,section>h2,.hero h2.hh,.hsv>h2{margin-bottom:1.1rem}
+.car-track{border-radius:12px}
+/* remates */
+.pk-pack.pk-adv{box-shadow:none}
+.pk-fi{border:1px solid var(--line)}
+details.fold{border:0;background:none;box-shadow:none}
+footer a{color:var(--teal);text-underline-offset:3px;text-decoration-thickness:1px}
+@media (prefers-reduced-motion:reduce){.cta,.pk-btn{transition:none}}
+</style>
 </body>
 </html>
