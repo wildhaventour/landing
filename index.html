@@ -849,9 +849,9 @@ var PACK={
 var ORDER=['esc','relax','mar','adv','full'],MORE=['esc','mar','full'];
 var TP={vol:55,kay:60,tin:65,tun:130};
 var SEG=[
- {k:'parejas',pk:'esc',room:'sup',pax:2,cfg:1,alt:'relax'},
+ {k:'parejas',pk:'relax',room:'sup',pax:2,cfg:1,alt:'adv',img:'/media/isla/seg-parejas.webp',alt_t:'a_parejas',ih:670},
  {k:'familias',pk:'relax',room:'sup',pax:3},
- {k:'amigos',pk:'esc',room:'sup',pax:2,img:'/media/isla/seg-amigos.webp',alt_t:'a_amigos'},
+ {k:'amigos',pk:'esc',room:'sup',pax:2,img:'/media/isla/seg-amigos.webp',alt_t:'a_amigos',ih:670},
  {k:'mayores',pk:'relax',room:'sup',pax:2},
  {k:'estudiantes',pk:'esc',room:'est',pax:3},
  {k:'chicas',pk:'relax',room:'sup',pax:2}
@@ -862,7 +862,7 @@ var TOURS=[
 ];
 var T={
 es:{
-vj_t:'Viaja a tu manera',vj_p:'Con amigos, en pareja, en familia o con tus compañeros de clase: cada viaje tiene su pack.',vj_hint:'Desliza para ver más →',vj_sug:'Pack sugerido',vj_two:'Habitación Superior para dos, a elegir:',vj_twon:'Precio por persona. Toca una opción para ver el detalle y reservar.',a_amigos:'Amigos en una carrera de caballito por la orilla de una playa de arena blanca; una pareja se cayó en la arena y otros animan con una toalla como meta, con el volcán al fondo (imagen ilustrativa)',
+vj_t:'Viaja a tu manera',vj_p:'Con amigos, en pareja, en familia o con tus compañeros de clase: cada viaje tiene su pack.',vj_hint:'Desliza para ver más →',vj_sug:'Pack sugerido',a_parejas:'Pareja caminando de la mano por la orilla al atardecer, con el volcán al fondo y un lobo marino descansando en la arena (imagen ilustrativa)',vj_two:'Habitación Superior para dos, a elegir:',vj_twon:'Precio por persona. Toca una opción para ver el detalle y reservar.',a_amigos:'Amigos en una carrera de caballito por la orilla de una playa de arena blanca; una pareja se cayó en la arena y otros animan con una toalla como meta, con el volcán al fondo (imagen ilustrativa)',
 sg_amigos_t:'Con amigos',sg_amigos_p:'Carreras en la playa, snorkel con lobos marinos y atardeceres juntos. Combinen habitaciones y armen el viaje entre todos.',sg_amigos_c:'Cotiza tu grupo por WhatsApp',
 sg_parejas_t:'En pareja',sg_parejas_p:'Una habitación Superior para dos, el mar de Isabela y atardeceres sin prisa. Si es luna de miel, cuéntanos.',sg_parejas_c:'Ver el precio para dos',
 sg_familias_t:'En familia',sg_familias_p:'Aguas tranquilas en Concha de Perla, tortugas gigantes en el camino y habitaciones para tres o varias juntas.',sg_familias_n:'Precio para niños: consúltanos.',sg_familias_c:'Cotiza tu viaje en familia',
@@ -956,7 +956,7 @@ msg_tours:'Hola, me interesan estos tours para {px}:\n{list}\nTotal: {tot}\n¿Qu
 nodate:'por definir'
 },
 en:{
-vj_t:'Travel your way',vj_p:'With friends, as a couple, with family or with classmates: every trip has its pack.',vj_hint:'Swipe for more →',vj_sug:'Suggested pack',vj_two:'Superior room for two, your choice:',vj_twon:'Price per person. Tap an option to see the details and book.',a_amigos:'Friends in a piggyback race along the shore of a white-sand beach; one couple has tumbled onto the sand while others cheer with a towel as the finish line, with a volcano in the background (illustrative image)',
+vj_t:'Travel your way',vj_p:'With friends, as a couple, with family or with classmates: every trip has its pack.',vj_hint:'Swipe for more →',vj_sug:'Suggested pack',a_parejas:'Couple walking hand in hand along the shore at sunset, with the volcano in the background and a sea lion resting on the sand (illustrative image)',vj_two:'Superior room for two, your choice:',vj_twon:'Price per person. Tap an option to see the details and book.',a_amigos:'Friends in a piggyback race along the shore of a white-sand beach; one couple has tumbled onto the sand while others cheer with a towel as the finish line, with a volcano in the background (illustrative image)',
 sg_amigos_t:'With friends',sg_amigos_p:'Beach races, snorkeling with sea lions and sunsets together. Combine rooms and plan the trip as a group.',sg_amigos_c:'Get a group quote on WhatsApp',
 sg_parejas_t:'As a couple',sg_parejas_p:'A Superior room for two, Isabela’s sea and unhurried sunsets. If it’s your honeymoon, let us know.',sg_parejas_c:'See the price for two',
 sg_familias_t:'With family',sg_familias_p:'Calm water at Concha de Perla, giant tortoises along the trail and rooms for three or several together.',sg_familias_n:'Children’s prices: ask us.',sg_familias_c:'Get a family quote',
@@ -1102,7 +1102,7 @@ function renderSeg(){
  var t=T[L],g=$('vjgrid');g.textContent='';
  SEG.forEach(function(x){
   var c=document.createElement('article');c.className='mp-card vj-card';
-  if(x.img){var fg=document.createElement('figure');fg.className='vj-img';var im=document.createElement('img');im.src=x.img;im.alt=t[x.alt_t];im.loading='lazy';im.width=1200;im.height=670;var ia=document.createElement('span');ia.className='pk-ia';ia.textContent=t.ia_note;fg.appendChild(im);fg.appendChild(ia);c.appendChild(fg)}
+  if(x.img){var fg=document.createElement('figure');fg.className='vj-img';var im=document.createElement('img');im.src=x.img;im.alt=t[x.alt_t];im.loading='lazy';im.width=1200;im.height=x.ih;var ia=document.createElement('span');ia.className='pk-ia';ia.textContent=t.ia_note;fg.appendChild(im);fg.appendChild(ia);c.appendChild(fg)}
   var h=document.createElement('h4');h.textContent=t['sg_'+x.k+'_t'];c.appendChild(h);
   var p=document.createElement('p');p.className='mp-for';p.textContent=t['sg_'+x.k+'_p'];c.appendChild(p);
   if(x.alt){
