@@ -592,7 +592,7 @@ html,body{overflow-x:clip}
 
 <section id="reservar"><h2 data-i="ht"></h2>
  <p data-i="hti"></p>
- <ol class="pk-steps bk3"><li><p data-i="s1"></p><div class="bk-row"><a class="pk-btn" href="#packs" data-pk="h_cta"></a><a class="pk-btn pk-teal" href="#presupuesto" data-pk="h_cta2"></a></div></li><li><p data-i="s2"></p></li><li><p data-i="s3"></p></li></ol>
+ <ol class="pk-steps bk3"><li><p data-i="s1"></p><div class="bk-row"><a class="pk-btn" href="#packs" data-pk="h_cta"></a><a class="pk-btn bk-ghost" href="#presupuesto" data-pk="h_cta2"></a></div></li><li><p data-i="s2"></p></li><li><p data-i="s3"></p></li></ol>
  <p class="bk-pay" data-i="todo3"></p>
 </section>
 </div>
@@ -1485,6 +1485,13 @@ label,.wcard em,.wcard span,footer p,.cns,.cns-pt,.cns-tt{font-size:.95rem!impor
 .badge,.pk-ph span,.pk-tag,.pk-tp small,.bd small,button small{font-size:.75rem!important}
 </style>
 <style id="v6">
+/* 8 reglas (19/11): toques de 44 px, un solo botón principal, dorado solo para lo que se toca */
+.car-nav{width:44px!important;height:44px!important}
+.car-dots{gap:0}
+.car-dots button{width:30px;height:44px}
+.topnav a{min-height:44px;display:inline-flex;align-items:center}
+.bk-row .bk-ghost{background:transparent;color:var(--teal);border:2px solid var(--teal);box-shadow:none}
+main section>h2::after,section>h2::after,.hero h2.hh::after,.hsv>h2::after{background:var(--teal)}
 #viaja .vj-feat{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:1rem 0 1.2rem}
 #viaja .vj-feat figure{position:relative;margin:0}
 #viaja .vj-feat img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
