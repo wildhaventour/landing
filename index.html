@@ -361,7 +361,7 @@ html,body{overflow-x:clip}
 <main>
 <div id="pk" data-v4c>
 <div class="pk-hero">
- <img class="pk-scene" src="/media/isla/snorkel-tuneles-ia.webp" data-pka="a_tunh" alt="" width="928" height="1152" fetchpriority="high" style="object-position:center 58%">
+ <picture><source media="(min-width:860px)" srcset="/media/isla/hero-tuneles-pc-1600.webp 1600w, /media/isla/hero-tuneles-pc-2560.webp 2560w" sizes="100vw"><img class="pk-scene" src="/media/isla/hero-tuneles-movil-828.webp" srcset="/media/isla/hero-tuneles-movil-828.webp 828w, /media/isla/hero-tuneles-movil-1242.webp 1242w" sizes="100vw" data-pka="a_tunh" alt="" width="828" height="1484" fetchpriority="high"></picture>
  <span class="pk-ia" data-pk="ia_note"></span>
  <div class="pk-in">
   <div class="pk-eyebrow" data-pk="h_eye"></div>
@@ -1585,5 +1585,29 @@ html.rv-on .rv.rv-in{opacity:1;transform:none}
 })();
 </script>
 <style>#bot-btn.isa-read{opacity:0;transform:translateY(8px);pointer-events:none}</style>
+<style id="v8-hero">
+header#top{z-index:20}
+#langtip{position:relative;z-index:6}
+#langtip a{color:#fff!important;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+#pk .pk-hero{position:relative!important;display:flex!important;align-items:flex-end;width:100vw;margin-left:calc(50% - 50vw);margin-top:-101px;min-height:100svh;border-radius:0!important;overflow:hidden;background:#06262b}
+#pk .pk-hero img.pk-scene{position:absolute!important;inset:0;width:100%!important;height:100%!important;aspect-ratio:auto!important;object-fit:cover;object-position:58% 30%}
+#pk .pk-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,30,36,.45) 0%,rgba(6,30,36,0) 20%,rgba(6,30,36,0) 48%,rgba(6,30,36,.78) 76%,rgba(6,30,36,.94) 100%);pointer-events:none}
+#pk .pk-hero .pk-ia{top:112px!important;right:max(12px,calc(50vw - 522px))!important;z-index:3}
+#pk .pk-hero .pk-in{position:relative!important;z-index:2;display:flex!important;flex-direction:column;background:none!important;padding:0 18px calc(110px + env(safe-area-inset-bottom,0px))!important;width:100%}
+#pk .pk-hero .pk-in h1{font-size:2.05rem!important;line-height:1.08!important;margin:0 0 .5rem!important;text-wrap:balance}
+#pk .pk-hero .pk-in .pk-eyebrow{font-size:.9rem!important;margin:0 0 .5rem!important}
+#pk .pk-hero .pk-in p{font-size:1rem!important;line-height:1.5!important;max-width:34ch}
+#pk .pk-hero .pk-row{margin-top:1.1rem!important}
+#pk .pk-hero .pk-row .pk-btn{min-height:48px!important;font-size:.95rem!important}
+@media (min-width:860px){
+ #pk .pk-hero{margin-top:-104px;min-height:min(100svh,880px)}
+ #pk .pk-hero img.pk-scene{object-position:50% 35%}
+ #pk .pk-hero .pk-in{display:grid!important;grid-template-columns:1fr auto;column-gap:2.5rem;align-items:end;padding:0 max(2rem,calc(50vw - 522px)) 3.2rem!important}
+ #pk .pk-hero .pk-in>*{grid-column:1}
+ #pk .pk-hero .pk-in .pk-row{grid-column:2;grid-row:1 / span 3;align-self:end;flex-direction:column!important;min-width:260px}
+ #pk .pk-hero .pk-in h1{font-size:3.2rem!important}
+ #pk .pk-hero .pk-in p{font-size:1.1rem!important;max-width:46ch}
+}
+</style>
 </body>
 </html>
