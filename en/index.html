@@ -1572,5 +1572,18 @@ html.rv-on .rv.rv-in{opacity:1;transform:none}
 })();
 </script>
 
+<script>
+/* v7b: en celular, Isa se oculta mientras bajas leyendo y vuelve al subir o al final de la página */
+(function(){
+ var b=document.getElementById('bot-btn'); if(!b||!matchMedia('(max-width:859px)').matches)return;
+ var last=scrollY,tk=false;
+ addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){
+  var y=scrollY,d=y-last,end=innerHeight+y>=document.documentElement.scrollHeight-80;
+  if(Math.abs(d)>6){b.classList.toggle('isa-read',d>0&&!end);last=y}
+  if(end)b.classList.remove('isa-read');
+  tk=false})},{passive:true});
+})();
+</script>
+<style>#bot-btn.isa-read{opacity:0;transform:translateY(8px);pointer-events:none}</style>
 </body>
 </html>
