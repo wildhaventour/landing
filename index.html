@@ -1102,7 +1102,7 @@ function renderSeg(){
  var t=T[L],g=$('vjgrid');g.textContent='';
  SEG.forEach(function(x){
   var c=document.createElement('article');c.className='mp-card vj-card';
-  if(x.img){var fg=document.createElement('figure');fg.className='vj-img';var im=document.createElement('img');im.src=x.img;im.alt=t[x.alt_t];im.loading='lazy';im.width=1200;im.height=655;var ia=document.createElement('span');ia.className='pk-ia';ia.textContent=t.ia_note;fg.appendChild(im);fg.appendChild(ia);c.appendChild(fg)}
+  if(x.img){var fg=document.createElement('figure');fg.className='vj-img';var im=document.createElement('img');im.src=x.img;im.alt=t[x.alt_t];im.loading='lazy';im.width=1200;im.height=670;var ia=document.createElement('span');ia.className='pk-ia';ia.textContent=t.ia_note;fg.appendChild(im);fg.appendChild(ia);c.appendChild(fg)}
   var h=document.createElement('h4');h.textContent=t['sg_'+x.k+'_t'];c.appendChild(h);
   var p=document.createElement('p');p.className='mp-for';p.textContent=t['sg_'+x.k+'_p'];c.appendChild(p);
   if(x.alt){
