@@ -858,7 +858,7 @@ var PACK={
 var ORDER=['esc','relax','mar','adv','full'],MORE=['esc','mar','full'];
 var TP={vol:55,kay:60,tin:65,tun:130};
 var SEG=[
- {k:'parejas',pk:'esc',room:'sup',pax:2,cfg:1},
+ {k:'parejas',pk:'esc',room:'sup',pax:2,cfg:1,alt:'relax'},
  {k:'familias',pk:'relax',room:'sup',pax:3},
  {k:'chicas',pk:'relax',room:'sup',pax:2},
  {k:'mayores',pk:'relax',room:'sup',pax:2},
@@ -870,7 +870,7 @@ var TOURS=[
 ];
 var T={
 es:{
-vj_t:'Viaja a tu manera',vj_p:'Con amigos, en pareja, en familia o con tus compañeros de clase: cada viaje tiene su pack.',vj_hint:'Desliza para ver más →',vj_sug:'Pack sugerido',a_amigos:'Grupo de amigos jugando con una pelota en una playa de arena blanca con agua turquesa, volcán al fondo y una iguana marina sobre la lava (imagen ilustrativa)',
+vj_t:'Viaja a tu manera',vj_p:'Con amigos, en pareja, en familia o con tus compañeros de clase: cada viaje tiene su pack.',vj_hint:'Desliza para ver más →',vj_sug:'Pack sugerido',vj_two:'Habitación Superior para dos, a elegir:',vj_twon:'Precio por persona. Toca una opción para ver el detalle y reservar.',a_amigos:'Grupo de amigos jugando con una pelota en una playa de arena blanca con agua turquesa, volcán al fondo y una iguana marina sobre la lava (imagen ilustrativa)',
 sg_amigos_t:'Con amigos',sg_amigos_p:'Pelota en la playa, snorkel con lobos marinos y atardeceres juntos. Combinen habitaciones y armen el viaje entre todos.',sg_amigos_c:'Cotiza tu grupo por WhatsApp',
 sg_parejas_t:'En pareja',sg_parejas_p:'Una habitación Superior para dos, el mar de Isabela y atardeceres sin prisa. Si es luna de miel, cuéntanos.',sg_parejas_c:'Ver el precio para dos',
 sg_familias_t:'En familia',sg_familias_p:'Aguas tranquilas en Concha de Perla, tortugas gigantes en el camino y habitaciones para tres o varias juntas.',sg_familias_n:'Precio para niños: consúltanos.',sg_familias_c:'Cotiza tu viaje en familia',
@@ -964,7 +964,7 @@ msg_tours:'Hola, me interesan estos tours para {px}:\n{list}\nTotal: {tot}\n¿Qu
 nodate:'por definir'
 },
 en:{
-vj_t:'Travel your way',vj_p:'With friends, as a couple, with family or with classmates: every trip has its pack.',vj_hint:'Swipe for more →',vj_sug:'Suggested pack',a_amigos:'Group of friends playing with a ball on a white-sand beach with turquoise water, a volcano in the background and a marine iguana on the lava (illustrative image)',
+vj_t:'Travel your way',vj_p:'With friends, as a couple, with family or with classmates: every trip has its pack.',vj_hint:'Swipe for more →',vj_sug:'Suggested pack',vj_two:'Superior room for two, your choice:',vj_twon:'Price per person. Tap an option to see the details and book.',a_amigos:'Group of friends playing with a ball on a white-sand beach with turquoise water, a volcano in the background and a marine iguana on the lava (illustrative image)',
 sg_amigos_t:'With friends',sg_amigos_p:'Beach games, snorkeling with sea lions and sunsets together. Combine rooms and plan the trip as a group.',sg_amigos_c:'Get a group quote on WhatsApp',
 sg_parejas_t:'As a couple',sg_parejas_p:'A Superior room for two, Isabela’s sea and unhurried sunsets. If it’s your honeymoon, let us know.',sg_parejas_c:'See the price for two',
 sg_familias_t:'With family',sg_familias_p:'Calm water at Concha de Perla, giant tortoises along the trail and rooms for three or several together.',sg_familias_n:'Children’s prices: ask us.',sg_familias_c:'Get a family quote',
@@ -1113,6 +1113,14 @@ function renderSeg(){
   var c=document.createElement('article');c.className='mp-card vj-card';
   var h=document.createElement('h4');h.textContent=t['sg_'+x.k+'_t'];c.appendChild(h);
   var p=document.createElement('p');p.className='mp-for';p.textContent=t['sg_'+x.k+'_p'];c.appendChild(p);
+  if(x.alt){
+   var h5=document.createElement('p');h5.className='vj-pk';h5.textContent=t.vj_two;c.appendChild(h5);
+   [x.pk,x.alt].forEach(function(k){var o=document.createElement('button');o.type='button';o.className='vj-opt';
+    var keep=S.tour,f=S.ferry;if(PACK[k].pick){S.tour=PACK[k].pick[0];S.ferry='pm'}var v=packPP(k,x.room,x.pax,0,false).pp;S.tour=keep;S.ferry=f;
+    var a=document.createElement('span');a.textContent=t['nm_'+k];var sm=document.createElement('small');sm.textContent=dur(k);a.appendChild(sm);var b=document.createElement('strong');b.textContent=t.mp_from+' '+usd(v);o.appendChild(a);o.appendChild(b);
+    o.onclick=function(){S.pk=k;S.room=x.room;S.pax=x.pax;renderCfg();$('cfg').scrollIntoView({behavior:'smooth',block:'start'})};c.appendChild(o)});
+   var nn=document.createElement('p');nn.className='mp-warn';nn.textContent=t.vj_twon;c.appendChild(nn);g.appendChild(c);return;
+  }
   var q=document.createElement('p');q.className='vj-pk';q.textContent=fromTxt(x.pk,x.room,x.pax);c.appendChild(q);
   if(t['sg_'+x.k+'_n']){var n=document.createElement('p');n.className='mp-warn';n.textContent=t['sg_'+x.k+'_n'];c.appendChild(n)}
   var bt;
@@ -1494,6 +1502,11 @@ label,.wcard em,.wcard span,footer p,.cns,.cns-pt,.cns-tt{font-size:.95rem!impor
 .vj-pk{font-size:.88rem;color:var(--teal);font-weight:600}
 @media(min-width:860px){#viaja .vj-feat{grid-template-columns:1.35fr 1fr;align-items:center}#viaja .vj-feat img{aspect-ratio:auto;height:100%;min-height:360px}}
 .vj-grid .vj-card h4{margin-top:0}
+.vj-opt{display:flex;justify-content:space-between;align-items:center;gap:.6rem;width:100%;min-height:52px;margin:.25rem 0;padding:.6rem .9rem;border:1.5px solid var(--teal);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;font-size:.92rem;text-align:left;cursor:pointer;transition:background-color 200ms ease}
+.vj-opt span{font-weight:700}.vj-opt small{display:block;font-weight:500;color:var(--muted);font-size:.82rem}
+.vj-opt strong{color:var(--teal);font-size:1.05rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.vj-opt:active{transform:scale(.97)}
+@media(hover:hover){.vj-opt:hover{background:var(--sea)}}
 .mp{margin-top:2.4rem}
 .mp h3{font-size:1.35rem;margin:0 0 .3rem}
 .mp-p{color:var(--muted);max-width:60ch;margin:0 0 1rem}
