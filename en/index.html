@@ -1609,5 +1609,18 @@ header#top{z-index:20}
  #pk .pk-hero .pk-in p{font-size:1.1rem!important;max-width:46ch}
 }
 </style>
+<style id="v8b">
+#mbar{transition:opacity 220ms cubic-bezier(.23,1,.32,1),transform 220ms cubic-bezier(.23,1,.32,1)}
+#mbar.mbar-hero{opacity:0;transform:translateY(12px);pointer-events:none}
+@media (max-width:859px){#pk .pk-hero .pk-in{padding-bottom:calc(36px + env(safe-area-inset-bottom,0px))!important}}
+</style>
+<script>
+/* v8b: en celular la barra fija se esconde mientras se ve el hero */
+(function(){var m=document.getElementById('mbar'),h=document.querySelector('.pk-hero');
+ if(!m||!h||!('IntersectionObserver' in window))return;
+ m.classList.add('mbar-hero');
+ new IntersectionObserver(function(es){es.forEach(function(e){m.classList.toggle('mbar-hero',e.isIntersecting&&e.intersectionRatio>.35)})},{threshold:[0,.35,.6,1]}).observe(h);
+})();
+</script>
 </body>
 </html>
