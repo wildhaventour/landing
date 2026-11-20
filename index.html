@@ -470,7 +470,7 @@ html,body{overflow-x:clip}
    <div><label for="xn" data-pk="c_xn"></label><select id="xn"></select></div>
    <div class="pk-full"><label for="nm" data-pk="c_nm"></label><input id="nm" autocomplete="name"></div>
   </div>
-  <div class="pk-fields" id="tourbox" hidden><div class="pk-full"><label for="esctour" data-pk="c_tour"></label><select id="esctour"></select></div></div>
+  <div class="pk-fields" id="tourbox" hidden><div class="pk-full"><label for="escferry" data-pk="c_ferry"></label><select id="escferry"></select></div><div class="pk-full" id="t1box" hidden><label for="esct1" data-pk="c_t1"></label><select id="esct1"></select></div><div class="pk-full"><label for="esctour" data-pk="c_tour"></label><select id="esctour"></select></div></div>
   <div class="pk-swap" id="swapbox"><input type="checkbox" id="swap"><label for="swap" data-pk="c_swap"></label></div>
   <div class="pk-out">
    <div class="pk-tot"><div><div class="pk-small" data-pk="c_pp"></div><span class="pk-big" id="o_pp"></span></div><div style="text-align:right"><div class="pk-small" data-pk="c_tot"></div><strong id="o_tot" style="font-size:1.4rem"></strong></div></div>
@@ -866,7 +866,7 @@ var T={
 es:{
 nm_esc:'Pack Express',nm_relax:'Relax Pack',nm_mar:'Pack Mar',nm_adv:'Adventure Pack',nm_full:'Isabela Completa',
 d2:'3 días · 2 noches',d3:'4 días · 3 noches',d4:'5 días · 4 noches',
-fr_esc:'Un fin de semana largo en Isabela: un tour con guía que tú eliges y dos planes gratis a pie.',pick1:'1 tour con guía a elegir: Volcán Chico, Kayak en Concha de Perla, Las Tintoreras o Los Túneles',fr1:'Gratis: tortugas gigantes y flamencos, a pie por el sendero de los humedales',fr2:'Gratis: atardecer en la playa de Puerto Villamil',c_tour:'Tu tour con guía',msg_tour:'- Tour elegido: {t}',fr_mar:'Dos días de mar: Los Túneles y Las Tintoreras.',fr_full:'Los cuatro tours principales, con tiempo para todo.',
+fr_esc:'Un fin de semana largo en Isabela: un tour con guía que tú eliges y dos planes gratis a pie.',pick1:'1 tour con guía a elegir: Volcán Chico, Kayak en Concha de Perla, Las Tintoreras o Los Túneles',fr1:'Gratis: tortugas gigantes y flamencos, a pie por el sendero de los humedales',fr2:'Gratis: atardecer en la playa de Puerto Villamil',c_tour:'Tu tour con guía (día 2)',msg_tour:'- Tour del día 2: {t}',c_ferry:'Llegas a Isabela en el ferry de',fy_pm:'La tarde (llega ~17:00)',fy_am:'La mañana (llega ~9:00)',sn_vol:'Volcán Chico',sn_kay:'Kayak en Concha de Perla',sn_tin:'Las Tintoreras',sn_tun:'Los Túneles',c_t1:'Tour del día 1, a las 12:30',msg_ferry:'- Ferry de llegada: {f}',msg_t1:'- Tour del día 1: {t}',am_n:'¿Llegas en el ferry de la mañana? Suma Las Tintoreras o el Kayak el día 1.',fr_mar:'Dos días de mar: Los Túneles y Las Tintoreras.',fr_full:'Los cuatro tours principales, con tiempo para todo.',
 tn_kay:'Kayak y snorkel en Concha de Perla, con guía',tn_bike:'Paseo en bici de 4 horas al Muro de las Lágrimas',tn_tin:'Las Tintoreras: canal de tiburones y snorkel, con guía',tn_vol:'Sierra Negra y Volcán Chico: caminata con guía',tn_tun:'Los Túneles (Cabo Rosa): snorkel entre arcos de lava, con guía',
 inc_base:'Hotel con desayuno y recibimiento en el muelle',
 mp_t:'Más packs, para cada viaje y presupuesto',mp_p:'Un viaje corto de 3 días o uno completo de 5 días. Todos incluyen hotel con desayuno, tours con guía y recibimiento en el muelle.',mp_hint:'Desliza para ver más packs →',mp_pick:'Elegir este pack',mp_from:'desde',mp_pp:'por persona, Estándar para dos',
@@ -951,7 +951,7 @@ nodate:'por definir'
 en:{
 nm_esc:'Express Pack',nm_relax:'Relax Pack',nm_mar:'Ocean Pack',nm_adv:'Adventure Pack',nm_full:'Full Isabela',
 d2:'3 days · 2 nights',d3:'4 days · 3 nights',d4:'5 days · 4 nights',
-fr_esc:'A long weekend on Isabela: one guided tour of your choice and two free plans on foot.',pick1:'1 guided tour of your choice: Volcán Chico, kayaking at Concha de Perla, Las Tintoreras or Los Túneles',fr1:'Free: giant tortoises and flamingos, on foot along the wetlands trail',fr2:'Free: sunset on Puerto Villamil beach',c_tour:'Your guided tour',msg_tour:'- Tour: {t}',fr_mar:'Two days at sea: Los Túneles and Las Tintoreras.',fr_full:'All four main tours, with time for everything.',
+fr_esc:'A long weekend on Isabela: one guided tour of your choice and two free plans on foot.',pick1:'1 guided tour of your choice: Volcán Chico, kayaking at Concha de Perla, Las Tintoreras or Los Túneles',fr1:'Free: giant tortoises and flamingos, on foot along the wetlands trail',fr2:'Free: sunset on Puerto Villamil beach',c_tour:'Your guided tour (day 2)',msg_tour:'- Day 2 tour: {t}',c_ferry:'You arrive on Isabela on the',fy_pm:'Afternoon ferry (~5:00 PM)',fy_am:'Morning ferry (~9:00 AM)',sn_vol:'Volcán Chico',sn_kay:'Kayaking at Concha de Perla',sn_tin:'Las Tintoreras',sn_tun:'Los Túneles',c_t1:'Day 1 tour, at 12:30 PM',msg_ferry:'- Arrival ferry: {f}',msg_t1:'- Day 1 tour: {t}',am_n:'Arriving on the morning ferry? Add Las Tintoreras or kayaking on day 1.',fr_mar:'Two days at sea: Los Túneles and Las Tintoreras.',fr_full:'All four main tours, with time for everything.',
 tn_kay:'Guided kayaking and snorkeling at Concha de Perla',tn_bike:'4-hour bike ride to the Wall of Tears',tn_tin:'Las Tintoreras: guided shark channel and snorkeling',tn_vol:'Guided hike at Sierra Negra and Volcán Chico',tn_tun:'Los Túneles (Cabo Rosa): guided snorkeling among lava arches',
 inc_base:'Lodge stay with breakfast and a welcome at the pier',
 mp_t:'More packs for every trip and budget',mp_p:'A short three-day trip or a full five-day one. Every pack includes your lodge stay with breakfast, guided tours and a welcome at the pier.',mp_hint:'Swipe for more packs →',mp_pick:'Choose this pack',mp_from:'from',mp_pp:'per person, Standard room for two',
@@ -1043,12 +1043,13 @@ azu:'<svg viewBox="0 0 320 160" aria-hidden="true"><rect width="320" height="160
 };
 
 var L='es',$=function(i){return document.getElementById(i)};
-var S={tour:'vol',pk:'adv',room:'est',pax:2,xn:0,swap:false},SEL={};
+var S={ferry:'pm',tour1:'tin',tour:'vol',pk:'adv',room:'est',pax:2,xn:0,swap:false},SEL={};
 function today(){var t=new Date();return t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0')}
 function usd(v){return new Intl.NumberFormat(L==='es'?'es-EC':'en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(v)}
+function fixT1(){if(S.tour1===S.tour)S.tour1=(S.tour==='tin'?'kay':'tin')}
 function packPP(pk,room,pax,xn,swap){
  var P=PACK[pk],nights=P.n+xn,rate=RACK[room][pax];
- var hotelPP=rate*nights/pax,trPP=TRANSFER/pax,tours=(P.pick?TP[S.tour]:P.tours)+(P.swap&&swap?P.swap:0);
+ var hotelPP=rate*nights/pax,trPP=TRANSFER/pax,tours=(P.pick?TP[S.tour]+(S.ferry==='am'?TP[S.tour1]:0):P.tours)+(P.swap&&swap?P.swap:0);
  return {pp:Math.ceil(hotelPP+trPP+tours-1e-9),hotel:Math.ceil(hotelPP-1e-9),tr:Math.ceil(trPP-1e-9),tours:tours,nights:nights,rate:rate};
 }
 function fillSelect(el,opts,val){el.textContent='';opts.forEach(function(o){var op=document.createElement('option');op.value=o[0];op.textContent=o[1];if(String(o[0])===String(val))op.selected=true;el.appendChild(op)})}
@@ -1068,6 +1069,7 @@ function renderMore(){
   var ul=document.createElement('ul');ul.className='pk-inc mp-inc';
   [t.inc_base].concat(P.pick?[t.pick1]:P.list.map(function(x){return t['tn_'+x]})).forEach(function(x){var li=document.createElement('li');li.textContent=x;ul.appendChild(li)});
   (P.free||[]).forEach(function(x){var li=document.createElement('li');li.className='pk-free';li.textContent=t[x];ul.appendChild(li)});c.appendChild(ul);
+  if(P.pick){var w=document.createElement('p');w.className='mp-warn';w.textContent=t.am_n;c.appendChild(w)}
   var pr=document.createElement('div');pr.className='mp-price';
   var a=document.createElement('span');a.textContent=t.mp_from+' ';var b=document.createElement('strong');var keep=S.tour;if(P.pick)S.tour=P.pick[0];b.textContent=usd(packPP(k,'est',2,0,false).pp);S.tour=keep;
   var sm=document.createElement('small');sm.textContent=t.mp_pp;pr.appendChild(a);pr.appendChild(b);pr.appendChild(sm);c.appendChild(pr);
@@ -1084,23 +1086,25 @@ function fillPacks(){var el=$('pksel'),t=T[L];el.textContent='';
   ORDER.filter(function(k){return PACK[k].n===n}).forEach(function(k){var op=document.createElement('option');op.value=k;op.textContent=t['nm_'+k];if(k===S.pk)op.selected=true;og.appendChild(op)});el.appendChild(og)});
 }
 function calc(){
- var t=T[L],arr=$('pkarr').value;
+ var t=T[L],arr=$('pkarr').value;fixT1();
  var r=packPP(S.pk,S.room,S.pax,S.xn,S.swap);
  $('o_pp').textContent=usd(r.pp);
  var tot=r.pp*S.pax;$('o_tot').textContent=usd(tot);
  var lines=$('o_lines');lines.textContent='';
  [[t.l_hotel+' · '+r.nights+' '+(r.nights===1?t.night1:t.nightN),usd(r.hotel)],[t.l_tours,usd(r.tours)]].forEach(function(x){var d=document.createElement('div');var a=document.createElement('span');a.textContent=x[0];var b=document.createElement('span');b.textContent=x[1];d.appendChild(a);d.appendChild(b);lines.appendChild(d)});
  $('o_note').textContent=t.note_r;
- $('swapbox').hidden=!PACK[S.pk].swap;$('tourbox').hidden=!PACK[S.pk].pick;if($('pksel').value!==S.pk)$('pksel').value=S.pk;
+ $('swapbox').hidden=!PACK[S.pk].swap;$('tourbox').hidden=!PACK[S.pk].pick;fixT1();$('t1box').hidden=S.ferry!=='am';
+ fillSelect($('esct1'),['tin','kay'].filter(function(k){return k!==S.tour}).map(function(k){return [k,t['sn_'+k]+' · +'+usd(TP[k])]}),S.tour1);if($('pksel').value!==S.pk)$('pksel').value=S.pk;
  var arrTxt=arr?new Date(arr+'T12:00:00').toLocaleDateString(L==='es'?'es-EC':'en-US',{day:'numeric',month:'long',year:'numeric'}):t.nodate;
  var room=(S.room==='est'?t.est:t.sup)+' · '+S.pax+' '+(S.pax===1?t.per1:t.perN);
- var m=t.msg_pack.replace('{pk}',t['nm_'+S.pk]+' ('+dur(S.pk)+')').replace('{room}',room).replace('{arr}',arrTxt).replace('{n}',r.nights).replace('{swap}',(PACK[S.pk].swap&&S.swap?t.msg_swap:'')+(PACK[S.pk].pick?t.msg_tour.replace('{t}',t['tn_'+S.tour])+'\n':'')).replace('{pp}',usd(r.pp)).replace('{tot}',usd(tot)).replace('{nm}',$('nm').value.trim()||'-');
+ var m=t.msg_pack.replace('{pk}',t['nm_'+S.pk]+' ('+dur(S.pk)+')').replace('{room}',room).replace('{arr}',arrTxt).replace('{n}',r.nights).replace('{swap}',(PACK[S.pk].swap&&S.swap?t.msg_swap:'')+(PACK[S.pk].pick?t.msg_ferry.replace('{f}',S.ferry==='am'?t.fy_am:t.fy_pm)+'\n'+(S.ferry==='am'?t.msg_t1.replace('{t}',t['tn_'+S.tour1])+'\n':'')+t.msg_tour.replace('{t}',t['tn_'+S.tour])+'\n':'')).replace('{pp}',usd(r.pp)).replace('{tot}',usd(tot)).replace('{nm}',$('nm').value.trim()||'-');
  $('wa_pack').href='https://wa.me/'+WA+'?text='+encodeURIComponent(m);
 }
 function renderCfg(){
  var t=T[L];
  fillPacks();
- fillSelect($('esctour'),PACK.esc.pick.map(function(k){return [k,t['tn_'+k]+' · +'+usd(TP[k])]}),S.tour);
+ fillSelect($('escferry'),[['pm',t.fy_pm],['am',t.fy_am]],S.ferry);
+ fillSelect($('esctour'),PACK.esc.pick.map(function(k){return [k,t['sn_'+k]+' · +'+usd(TP[k])]}),S.tour);
  fillSelect($('room'),[['est',t.est],['sup',t.sup]],S.room);
  fillSelect($('pax'),[[1,'1 '+t.per1],[2,'2 '+t.perN],[3,'3 '+t.perN]],S.pax);
  fillSelect($('xn'),[[0,t.xn0],[1,'+1 '+t.night1],[2,'+2 '+t.nightN],[3,'+3 '+t.nightN]],S.xn);
@@ -1137,7 +1141,7 @@ window.pkLang=function(l){
  document.querySelectorAll('[data-pka]').forEach(function(e){e.alt=T[l][e.dataset.pka]});
  renderFrom();renderCfg();renderTours();cart();
 };
-$('pksel').onchange=function(){S.pk=this.value;calc()};$('esctour').onchange=function(){S.tour=this.value;calc()};
+$('pksel').onchange=function(){S.pk=this.value;calc()};$('esctour').onchange=function(){S.tour=this.value;calc()};$('escferry').onchange=function(){S.ferry=this.value;calc()};$('esct1').onchange=function(){S.tour1=this.value;calc()};
 $('room').onchange=function(){S.room=this.value;calc()};
 $('pax').onchange=function(){S.pax=+this.value;calc()};
 $('xn').onchange=function(){S.xn=+this.value;calc()};
