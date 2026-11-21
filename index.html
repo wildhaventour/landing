@@ -359,9 +359,34 @@ html,body{overflow-x:clip}
   posthog.init('phc_AYd6Shqsmxzbkfjb76dD4mjEVhDdbt6wYXbgdPxggtE9', {
     api_host: 'https://us.i.posthog.com',
     defaults: '2026-08-30',
-    persistence: 'memory',
-    person_profiles: 'identified_only'
+    cookieless_mode: 'always',
+    person_profiles: 'identified_only',
+    before_send: function (e) {
+      try { if (e && e.event === '$autocapture' && JSON.stringify(e.properties || {}).indexOf('wa.me') > -1) return null; } catch (x) {}
+      return e;
+    }
   })
+  // Clic en WhatsApp: solo el botón y el pack, nunca el texto del mensaje (nombre, fechas, correo)
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="wa.me/"]') : null;
+    if (!a || !window.posthog) return;
+    var pack = null;
+    try {
+      var t = decodeURIComponent((a.getAttribute('href').split('text=')[1] || ''));
+      var m = t.match(/pack:\s*([^(\n]+?)\s*\(/i);
+      if (m && m[1].trim()) pack = m[1].trim();
+    } catch (x) {}
+    posthog.capture('clic_whatsapp', { boton: a.id || (a.textContent || '').trim().slice(0, 40) || 'enlace', pack: pack });
+  }, true);
+</script>
+<!-- Cambio de idioma suave: transición entre páginas y carga anticipada del otro idioma -->
+<style>@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.28s}</style>
+<script>
+  (function () {
+    var other = (document.documentElement.getAttribute('data-page') === 'en') ? '/' : '/en/';
+    function pre() { if (document.querySelector('link[data-pre]')) return; var l = document.createElement('link'); l.rel = 'prefetch'; l.href = other; l.setAttribute('data-pre', ''); document.head.appendChild(l); }
+    window.addEventListener('load', function () { (window.requestIdleCallback || function (f) { setTimeout(f, 2000); })(pre); });
+  })();
 </script>
 </head>
 <body>
@@ -1179,7 +1204,7 @@ try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){['relaxvid','advv
 <script>
 /* Consent: two separate boxes (terms + privacy) before every booking-request button; the record goes inside the message the client sends. */
 (function(){
- var V='2026-11-11';
+ var V='2026-11-21';
  var X={
   es:{t:'Acepto las <a href="/legal.html#condiciones" target="_blank" rel="noopener">Condiciones de reserva</a>, incluida la <a href="/legal.html#reembolsos" target="_blank" rel="noopener">Política de reembolso</a>.',
       p:'He leído la <a href="/legal.html#privacidad" target="_blank" rel="noopener">Política de privacidad</a>.',
