@@ -1637,6 +1637,11 @@ html.stg-on .stg.stg-run>*{transition:opacity 480ms cubic-bezier(.23,1,.32,1),tr
  addEventListener('resize',function(){if(innerWidth>=860&&h.classList.contains('nav-open'))set(false)});
  if(typeof setLang==='function'){var o=setLang;setLang=function(l){o(l);lab()}}
  lab();
+ /* al cambiar de idioma: quedarse en la sección que se está viendo, no en el último # visitado */
+ var here=function(){if(scrollY<innerHeight*.6)return '';var hb=Math.max(h.getBoundingClientRect().bottom+24,innerHeight*.35),id='';[].forEach.call(document.querySelectorAll('main section[id]'),function(s){if(s.getBoundingClientRect().top<=hb)id=s.id});return id?'#'+id:''};
+ var PG=document.documentElement.getAttribute('data-page')||'es',bes=document.getElementById('l-es'),ben=document.getElementById('l-en');
+ if(bes&&PG!=='es')bes.onclick=function(){location.href='/'+here()};
+ if(ben&&PG!=='en')ben.onclick=function(){location.href='/en/'+here()};
 })();
 /* v9b: las tarjetas aparecen una tras otra al llegar a la pantalla */
 (function(){
