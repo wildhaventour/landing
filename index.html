@@ -379,15 +379,8 @@ html,body{overflow-x:clip}
     posthog.capture('clic_whatsapp', { boton: a.id || (a.textContent || '').trim().slice(0, 40) || 'enlace', pack: pack });
   }, true);
 </script>
-<!-- Cambio de idioma suave: transición entre páginas y carga anticipada del otro idioma -->
+<!-- Cambio de idioma suave -->
 <style>@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.28s}</style>
-<script>
-  (function () {
-    var other = (document.documentElement.getAttribute('data-page') === 'en') ? '/' : '/en/';
-    function pre() { if (document.querySelector('link[data-pre]')) return; var l = document.createElement('link'); l.rel = 'prefetch'; l.href = other; l.setAttribute('data-pre', ''); document.head.appendChild(l); }
-    window.addEventListener('load', function () { (window.requestIdleCallback || function (f) { setTimeout(f, 2000); })(pre); });
-  })();
-</script>
 </head>
 <body>
 <div class="wrap">
@@ -1758,5 +1751,26 @@ header#top{transition:transform 300ms cubic-bezier(.23,1,.32,1),box-shadow 300ms
 /* v13: en Habitaciones cada tarjeta toma la altura de su contenido (sin hueco vacío en PC) */
 #habitaciones .grid.two{align-items:start}
 </style>
+<script>
+/* Cambio de idioma en el sitio, sin recargar: misma página, textos traducidos al instante, con fundido suave */
+(function () {
+  var TITLE = { es: 'Wild Haven Tour | Packs y hospedaje en Isla Isabela, Galápagos', en: 'Wild Haven Tour | Isabela Island, Galápagos: Lodge Stays & Tour Packs' };
+  function sw(l) {
+    var go = function () {
+      setLang(l);
+      document.documentElement.setAttribute('data-page', l);
+      document.title = TITLE[l];
+      try { history.replaceState(null, '', (l === 'en' ? '/en/' : '/') + location.search + location.hash); } catch (e) {}
+      var t = document.getElementById('langtip'); if (t) t.hidden = true;
+    };
+    if (document.startViewTransition) document.startViewTransition(go); else go();
+  }
+  var es = document.getElementById('l-es'), en = document.getElementById('l-en');
+  if (es && en && typeof setLang === 'function') {
+    es.onclick = function () { sw('es'); };
+    en.onclick = function () { sw('en'); };
+  }
+})();
+</script>
 </body>
 </html>
