@@ -1661,5 +1661,23 @@ html.stg-on .stg.stg-run>*{transition:opacity 480ms cubic-bezier(.23,1,.32,1),tr
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
 })();
 </script>
+<style id="v10-hdr">
+/* v10: la barra superior se esconde al bajar y vuelve al subir */
+header#top{transition:transform 300ms cubic-bezier(.23,1,.32,1),box-shadow 300ms ease}
+header#top.hdr-hide{transform:translateY(calc(-100% - 1rem))}
+@media(prefers-reduced-motion:reduce){header#top{transition:none}}
+</style>
+<script>
+(function(){
+ var h=document.getElementById('top');if(!h)return;
+ var last=scrollY,tk=false;
+ addEventListener('scroll',function(){if(tk)return;tk=true;requestAnimationFrame(function(){
+  var y=scrollY,d=y-last;
+  if(y<160||h.classList.contains('nav-open')){h.classList.remove('hdr-hide');last=y}
+  else if(Math.abs(d)>8){h.classList.toggle('hdr-hide',d>0);last=y}
+  tk=false})},{passive:true});
+ h.addEventListener('focusin',function(){h.classList.remove('hdr-hide')});
+})();
+</script>
 </body>
 </html>
